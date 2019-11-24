@@ -1,0 +1,55 @@
+.page-header__logo {
+  margin-left: 24px;
+}
+
+.page-header__logo:hover,
+.page-header__logo:focus
+{
+  opacity: 0.7;
+}
+
+.page-header__logo:active {
+  opacity: 0.5;
+}
+
+.page-header__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+  border: 1px solid #ededed;
+}
+
+.page-header__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 24px 0;
+  border-top: 1px solid #ededed;
+
+  background-color: white;
+}
+
+.page-header__link {
+  margin: 0;
+  padding: 5px 0;
+
+  font-size: 20px;
+  line-height: 1.25;
+  color: @heading-color;
+}
+
+.page-header__link:hover,
+.page-header__link:focus
+{
+  color: @cat-mode__link-hover-color;
+}
+
+.page-header__link:active {
+  color: @button-link-dwn-color-2;
+}
+
+.page-header__link--active {
+  border-bottom: 1px solid @button-color;
+}

@@ -1,0 +1,45 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 13px 0;
+
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  border: none;
+  background-color: @button-color;
+  color: white;
+
+  transition: 0.1s;
+}
+
+.button:hover,
+.button:focus {
+  background-color: @button-hover-color;
+}
+
+.button:active {
+  color: @button-link-dwn-color-1;
+}
+
+.button--additional {
+  margin: 25px 0px;
+  background-color: #f2f2f2;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: @text-color;
+}
+
+.button--additional:hover,
+.button--additional:focus
+{
+  background-color: @button--additional-hover-color;
+}
+
+.button--additional:active {
+  color: @button-link-dwn-color-2;
+}
