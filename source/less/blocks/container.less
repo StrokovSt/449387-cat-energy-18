@@ -1,8 +1,17 @@
 .container {
-  width: 320px;
+  min-width: 320px;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
 
-  border: 1px solid @border-color;
+  border-left: 1px solid @border-color;
+  border-right: 1px solid @border-color;
+  background-color: white;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: @tablet-width;
+    min-width: @tablet-width;
+    max-width: @desktop-width;
+  }
 }

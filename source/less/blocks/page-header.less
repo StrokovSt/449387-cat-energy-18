@@ -1,5 +1,16 @@
+/*         Мобильная разметка         */
+
 .page-header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 191px;
+  height: 39px;
   margin-left: 24px;
+}
+
+.page-header__logo-image {
+  display: block;
 }
 
 .page-header__logo:hover,
@@ -13,22 +24,23 @@
 }
 
 .page-header__list {
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   list-style: none;
-  border: 1px solid #ededed;
 }
 
 .page-header__item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 24px 0;
-  border-top: 1px solid #ededed;
 
-  background-color: white;
+  border-top: 1px solid #ededed;
+}
+
+.page-header__item:last-child {
+  border-bottom: 1px solid #ededed;
 }
 
 .page-header__link {
@@ -43,13 +55,63 @@
 .page-header__link:hover,
 .page-header__link:focus
 {
-  color: @cat-mode__link-hover-color;
+  color: @cat-link-hover-color;
 }
 
 .page-header__link:active {
-  color: @button-link-dwn-color-2;
+  color: @cat-link-active-color;
 }
 
 .page-header__link--active {
   border-bottom: 1px solid @button-color;
+}
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+    .page-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  .page-header__logo {
+    width: 174px;
+    height: 59px;
+    margin: 0;
+    padding: 0;
+    margin-right: 95px;
+  }
+
+  .page-header__main-nav {
+    flex-grow: 1;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .page-header__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    border: none;
+  }
+
+  .page-header__item {
+    border: none;
+  }
+
+.page-header__link {
+  margin: 0;
+  padding: 5px 0;
+
+  font-size: 20px;
+  line-height: 1.25;
+  color: @heading-color;
+  }
+
 }

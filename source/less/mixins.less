@@ -1,0 +1,106 @@
+/*         cat-form - примесь cat-fieldset         */
+
+.cat-fieldset {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0 20px;
+
+  border: none;
+
+    &::after {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    right: 0;
+    height: 3px;
+
+    background-color: @button-color;
+  }
+}
+
+.cat-fieldset--cat-name {
+  &::after {
+    width: 100px;
+  }
+}
+
+.cat-fieldset--cat-comment {
+    &::after {
+    width: 158px;
+  }
+}
+
+.cat-fieldset--addon {
+  &::after {
+    width: 136px;
+  }
+}
+
+/*         cat-form - примесь radio-label         */
+
+.radio-label {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 26px;
+  padding-left: 46px;
+}
+
+.radio-label::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid @border-color;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+  transform: translateY(-25%);
+}
+
+.radio-label:hover:before {
+  box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.radio-label:active:before {
+  border-color: @button-color;
+  box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+/*         cat-form - примесь checkbox-label         */
+
+.checkbox-label {
+  position: relative;
+
+  margin-bottom: 25px;
+  padding-left: 46px;
+}
+
+.checkbox-label::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid @input-border-color-1;
+
+  transform: translateY(-20%);
+}
+
+.checkbox-label:hover:before {
+  border: 1px solid @input-border-color;
+}

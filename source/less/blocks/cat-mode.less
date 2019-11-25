@@ -1,3 +1,5 @@
+/*         Разметка под телефон         */
+
 .cat-mode {
   padding: 0 20px;
 }
@@ -11,51 +13,43 @@
 
 .cat-mode__item {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-
   align-items: center;
+  justify-content: flex-start;
   padding: 22px 20px;
   padding-bottom: 0;
   margin-bottom: 20px;
+
   background-color: @background-color;
-}
-
-.cat-mode__heading {
-  margin: 0;
-  margin-left: 20px;
-  padding: 0;
-
-  text-transform: uppercase;
 }
 
 .cat-mode__icon-image {
   display: block;
 }
 
-.cat-mode__icon-image--strong {
-  margin-left: -5px;
-}
-
 .cat-mode__heading {
+  display: inline-block;
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+
   font-size: 24px;
   line-height: 1.5;
   text-align: left;
   color: @heading-color;
+  text-transform: uppercase;
 }
 
 .cat-mode__description {
-  margin: 24px 0;
+  display: inline-block;
+  padding: 24px 0;
 
   font-family: 'Arial', sans-serif;
   font-size: 14px;
   line-height: 1.3;
   text-align: left;
-  color: @text-color;
-}
 
-.cat-mode__text-container {
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid @border-darker-color;
 }
 
 .cat-mode__link {
@@ -94,5 +88,84 @@
 }
 
 .cat-mode__link:active {
-  color: @cat-mode__link-active;
+  color: @cat-link-active-color;
 }
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+  .cat-mode {
+    padding: 0 30px;
+  }
+
+    .cat-mode__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+      justify-content: space-between;
+    padding: 70px 55px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+
+    background-color: @background-color;
+  }
+
+  .cat-mode__heading {
+    width: 100%;
+    margin-left: 0;
+
+    order: -1;
+  }
+
+  .cat-mode__icon-image {
+    display: block;
+    width: 200px;
+    height: 200px;
+
+    order: 1;
+  }
+
+  .cat-mode__icon-image--strong {
+    margin-left: 0;
+  }
+
+  .cat-mode__heading {
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: left;
+    color: @heading-color;
+  }
+
+  .cat-mode__description {
+    width: 340px;
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    color: @text-color;
+
+    border: none;
+    order: 0;
+  }
+
+  .cat-mode__text-container {
+    border-bottom: 1px solid @border-darker-color;
+  }
+
+  .cat-mode__link {
+    position: relative;
+
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 62px;
+
+    font-size: 20px;
+
+    order: 2;
+  }
+
+}
+

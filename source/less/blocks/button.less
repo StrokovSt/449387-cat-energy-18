@@ -1,3 +1,5 @@
+/*         Мобильная разметка         */
+
 .button {
   display: block;
   width: 100%;
@@ -9,9 +11,10 @@
   font-size: 14px;
   line-height: 1.29;
   text-align: center;
+  color: #ffffff;
+
   border: none;
   background-color: @button-color;
-  color: white;
 
   transition: 0.1s;
 }
@@ -22,24 +25,43 @@
 }
 
 .button:active {
-  color: @button-link-dwn-color-1;
+  color: @button-link-color-1;
 }
 
 .button--additional {
   margin: 25px 0px;
-  background-color: #f2f2f2;
-  font-size: 16px;
+
   line-height: 1.25;
   text-align: center;
   color: @text-color;
+
+  background-color: #f2f2f2;
 }
 
 .button--additional:hover,
 .button--additional:focus
 {
-  background-color: @button--additional-hover-color;
+  background-color: @button-additional-hover-color;
 }
 
 .button--additional:active {
-  color: @button-link-dwn-color-2;
+  color: @button-link-color-2;
+}
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+  .button {
+    display: block;
+    width: 250px;
+    padding: 17px 0;
+
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+
+    transition: 0.1s;
+  }
+
 }
