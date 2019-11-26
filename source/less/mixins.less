@@ -104,3 +104,150 @@
 .checkbox-label:hover:before {
   border: 1px solid @input-border-color;
 }
+
+/*         work-principlу - примесь для work-principle__item         */
+
+@media (min-width: @tablet-width) {
+
+  .work-principle__item--1 {
+    &::after {
+      content: "1";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      font-size: 281px;
+      color: @background-color;
+
+      z-index: -1;
+    }
+  }
+
+  .work-principle__item--2 {
+    &::after {
+      content: "2";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      font-size: 281px;
+      color: @background-color;
+
+      z-index: -1;
+    }
+  }
+
+  .work-principle__item--3 {
+    &::after {
+      content: "3";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      font-size: 281px;
+      color: @background-color;
+
+      z-index: -1;
+    }
+  }
+
+  .work-principle__item--4 {
+    &::after {
+      content: "4";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      font-size: 281px;
+      color: @background-color;
+
+      z-index: -1;
+    }
+  }
+}
+
+/*         cat-mode - примеси для иконок         */
+
+.cat-mode__heading--slim::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  width: 70px;
+  height: 60px;
+
+  background-image: url("../img/slim-cat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cat-mode__heading--pro::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: -7px;
+
+  display: flex;
+  justify-content: flex-start;
+  width: 70px;
+  height: 60px;
+
+  background-image: url("../img/strong-cat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: @tablet-width) {
+
+  .cat-mode__heading--slim::after {
+    display: none;
+  }
+
+  .cat-mode__heading--pro::after {
+    display: none;
+  }
+
+  .cat-mode__text-container--slim::after {
+    content: '';
+
+    position: absolute;
+    top: 20%;
+    right: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    width: 270px;
+    height: 220px;
+
+    background-image: url("../img/cat-slim-tabler.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .cat-mode__text-container--pro::after {
+    content: '';
+
+    position: absolute;
+    top: 20%;
+    right: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    width: 270px;
+    height: 220px;
+
+    background-image: url("../img/cat-pro-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}

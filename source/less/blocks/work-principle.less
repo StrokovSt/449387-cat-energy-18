@@ -1,6 +1,6 @@
+/*         Разметка под телефон         */
+
 .work-principle {
-  width: 320px;
-  margin: 0 auto;
   padding: 0 20px;
 }
 
@@ -12,6 +12,7 @@
   font-size: 36px;
   line-height: 1.67;
   text-align: left;
+  font-weight: normal;
   color:@heading-color;
 }
 
@@ -24,27 +25,24 @@
 
 .work-principle__item {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 20px;
 }
 
 .work-principle__icon-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 60px;
   height: 60px;
+  margin-right: 20px;
 
   background-color: @button-color;
 }
 
 .work-principle__description {
   display: inline-block;
-  width: 195px;
+  width: 70%;
 
   font-family: 'Arial', sans-serif;
   font-size: 14px;
@@ -55,4 +53,53 @@
 
 .work-principle__icon-image {
   display: block;
+}
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+  .work-principle {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .work-principle__heading {
+    margin-bottom: 65px;
+
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .work-principle__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .work-principle__item {
+    position: relative;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 35%;
+    margin-bottom: 90px;
+
+    z-index: 1;
+  }
+
+  .work-principle__icon-container {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 35px;
+  }
+
+  .work-principle__description {
+    width: 100%;
+    margin-bottom: 50px;
+
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
 }

@@ -1,6 +1,9 @@
+/*         Мобильная разметка         */
+
 .example {
   padding: 0 20px;
-  background-color: #f2f2f2;
+
+  background-color: @background-color;
 }
 
 .example__heading {
@@ -9,28 +12,44 @@
   font-size: 36px;
   line-height: 1.67;
   text-align: left;
+  font-weight: normal;
   color: @heading-color;
 }
 
 .example__description {
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 
   font-family: 'Arial', sans-serif;
   font-size: 14px;
   line-height: 1.3;
   text-align: left;
-  color: @text-color;
 }
 
-.example__table {
-  width: 100%;
-  margin-bottom: 25px;
-  border-collapse: collapse;
+.example__list {
+  display: flex;
+  width: 280px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.example__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .example__value {
+  display: inline-block;
+  width: 125px;
+  margin: 0;
   padding: 18px 0;
-  border: 1px solid black;
+  border: 1px solid @input-border-color;
 
   font-size: 24px;
   text-align: center;
@@ -38,18 +57,101 @@
 }
 
 .example__field {
+  position: absolute;
+  bottom: -15px;
+
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  margin: 0;
+  padding: 0 20px;
+
   font-family: 'Arial', sans-serif;
   font-size: 12px;
   text-align: center;
-  color: @text-color;
+
+  background-color: @background-color;
 }
 
 .example__expenses {
-  margin-bottom: 45px;
+  display: block;
+  margin-top: 35px;
 
-  font-family: 'Arial', sans-serif;
   font-size: 14px;
   line-height: 1.43;
   text-align: center;
   color: @heading-color;
+}
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+  .example {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    background-color: #ffffff;
+  }
+
+  .example__heading {
+    width: 100%;
+    margin-bottom: 60px;
+
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .example__description {
+    width: 675px;
+    margin-bottom: 55px;
+
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .example__list {
+    width: 60%;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .example__item {
+    margin-right: 45px;
+}
+
+  .example__value {
+    width: 165px;
+    padding: 23px 0;
+
+    font-size: 30px;
+    line-height: 1.23;
+  }
+
+  .example__field {
+    position: absolute;
+    bottom: -13px;
+
+    display: inline-block;
+    width: inherit;
+    padding: 8px;
+
+    font-size: 14px;
+
+    background-color: #ffffff;
+  }
+
+  .example__expenses {
+    width: 174px;
+    margin-top: 0;
+    margin-left: auto;
+
+    font-size: 20px;
+    text-align: right;
+    line-height: 1;
+  }
+
 }
