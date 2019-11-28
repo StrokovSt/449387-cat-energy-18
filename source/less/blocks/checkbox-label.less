@@ -1,0 +1,27 @@
+/*         checkbox-label         */
+
+.checkbox-label {
+  position: relative;
+
+  margin-bottom: 25px;
+  padding-left: 46px;
+}
+
+.checkbox-label::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid @input-border-major-color;
+
+  transform: translateY(-20%);
+}
+
+.checkbox-label:hover:before {
+  border: 1px solid @input-border-color;
+}

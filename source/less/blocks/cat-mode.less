@@ -1,9 +1,5 @@
 /*         Разметка под телефон         */
 
-.cat-mode {
-  padding: 0 20px;
-}
-
 .cat-mode__list {
   margin: 0;
   padding: 0;
@@ -37,12 +33,48 @@
   font-size: 24px;
   line-height: 1.5;
   text-align: left;
-  color: @heading-color;
+  font-weight: normal;
   text-transform: uppercase;
+  color: @heading-color;
+}
+
+.cat-mode__heading--slim::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  width: 70px;
+  height: 60px;
+
+  background-image: url("../img/slim-cat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cat-mode__heading--pro::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: -7px;
+
+  display: flex;
+  justify-content: flex-start;
+  width: 70px;
+  height: 60px;
+
+  background-image: url("../img/strong-cat.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .cat-mode__description {
   display: inline-block;
+  margin: 0;
   padding: 24px 0;
   padding-top: 0;
 
@@ -100,10 +132,6 @@
 
 @media (min-width: @tablet-width) {
 
-  .cat-mode {
-    padding: 0 30px;
-  }
-
   .cat-mode__item {
     position: relative;
 
@@ -133,6 +161,48 @@
     line-height: 1.1;
   }
 
+    .cat-mode__heading--slim::after {
+    display: none;
+  }
+
+  .cat-mode__heading--pro::after {
+    display: none;
+  }
+
+  .cat-mode__text-container--slim::after {
+    content: '';
+
+    position: absolute;
+    top: 20%;
+    right: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    width: 270px;
+    height: 220px;
+
+    background-image: url("../img/cat-slim-tabler.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .cat-mode__text-container--pro::after {
+    content: '';
+
+    position: absolute;
+    top: 20%;
+    right: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    width: 270px;
+    height: 220px;
+
+    background-image: url("../img/cat-pro-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .cat-mode__description {
     width: 100%;
     margin: 0;
@@ -159,4 +229,3 @@
   }
 
 }
-

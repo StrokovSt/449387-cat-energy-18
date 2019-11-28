@@ -1,7 +1,14 @@
 /*         Глобальные свойства         */
 
-*{
+html {
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after
+{
+  box-sizing: inherit;
 }
 
 body {
@@ -14,6 +21,8 @@ body {
   line-height: 1;
   font-weight: normal;
   color: @text-color;
+
+  background-color: #ffffff;
 }
 
 a {

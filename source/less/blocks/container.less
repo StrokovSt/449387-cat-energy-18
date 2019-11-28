@@ -2,14 +2,26 @@
   min-width: 320px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
+}
 
-  border-left: 1px solid @border-color;
-  border-right: 1px solid @border-color;
-  background-color: white;
+.container--no-padding {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
 
 @media (min-width: @tablet-width) {
   .container {
+    width: 100%;
+    min-width: @tablet-width;
+    max-width: @desktop-width;
+    padding: 0 30px;
+  }
+
+  .container--no-padding {
+    padding: 0;
     width: 100%;
     min-width: @tablet-width;
     max-width: @desktop-width;

@@ -1,12 +1,28 @@
 .page-main__heading {
-  margin: 34px 20px;
-  padding: 0;
+  width: 100%;
+  margin: 34px auto;
+
+  font-size: @font-huge-mobile-size;
+  line-height: @line-XXL-mobile-height;
+  font-weight: normal;
+  color: @heading-color;
 }
 
 .page-main__description {
   width: 226px;
   margin: 0;
-  margin-left: 20px;
   margin-bottom: 40px;
   padding: 0;
+
+  font-size: @font-medium-mobile-size;
+  line-height: @line-large-mobile-height;
+  color: @heading-color;
+}
+
+@media (min-width: @tablet-width) {
+
+  .page-main__form-container {
+    padding: 0 40px;
+  }
+
 }

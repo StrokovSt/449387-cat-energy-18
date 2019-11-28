@@ -1,16 +1,33 @@
 .additional-products {
-  padding: 0 20px;
+  position: relative;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    right: -20px;
+    top: 43px;
+
+    width: 53px;
+    height: 3px;
+    background-color: @button-color;
+  }
 }
 
 .additional-products__heading {
+  position: relative;
+
   margin: 0;
   padding: 30px 0;
 
-  font-size: 24px;
+  font-size: @font-extra-large-mobile-size;
+  line-height: @line-huge-mobile-height;
   text-align: left;
   color: @heading-color;
 
   border-bottom: 1px solid @border-color;
+
+
 }
 
 .additional-products__list {
@@ -27,9 +44,11 @@
 }
 
 .additional-item__heading {
+  margin: 0;
   margin-top: 15px;
 
   text-align: left;
+  line-height: @line-medium-mobile-height;
   font-weight: normal;
   color: #222222;
 }
@@ -43,15 +62,15 @@
 
 .additional-item__field {
   font-family: 'Arial', sans-serif;
-  font-size: 12px;
-  line-height: 1.33;
+  font-size: @font-small-mobile-size;
+  line-height: @line-small-mobile-height;
   text-align: left;
   font-weight: normal;
 }
 
 .additional-item__value {
   font-family: 'Arial', sans-serif;
-  font-size: 12px;
-  line-height: 1.33;
+  font-size: @font-small-mobile-size;
+  line-height: @line-small-mobile-height;
   text-align: right;
 }

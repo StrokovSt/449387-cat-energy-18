@@ -1,9 +1,5 @@
 /*         Разметка под телефон         */
 
-.work-principle {
-  padding: 0 20px;
-}
-
 .work-principle__heading {
   margin: 0;
   margin-bottom: 25px;
@@ -43,6 +39,7 @@
 .work-principle__description {
   display: inline-block;
   width: 70%;
+  margin: 0;
 
   font-family: 'Arial', sans-serif;
   font-size: 14px;
@@ -61,7 +58,6 @@
 
   .work-principle {
     width: 100%;
-    padding: 0 30px;
   }
 
   .work-principle__heading {
@@ -86,6 +82,66 @@
     margin-bottom: 90px;
 
     z-index: 1;
+  }
+
+    .work-principle__item--1 {
+    &::after {
+      content: "1";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      font-size: 281px;
+      color: @background-color;
+
+      z-index: -1;
+    }
+  }
+
+  .work-principle__item--2 {
+    &::after {
+      content: "2";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      font-size: 281px;
+      color: @background-color;
+
+      z-index: -1;
+    }
+  }
+
+  .work-principle__item--3 {
+    &::after {
+      content: "3";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      font-size: 281px;
+      color: @background-color;
+
+      z-index: -1;
+    }
+  }
+
+  .work-principle__item--4 {
+    &::after {
+      content: "4";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      font-size: 281px;
+      color: @background-color;
+
+      z-index: -1;
+    }
   }
 
   .work-principle__icon-container {

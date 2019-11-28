@@ -1,5 +1,9 @@
 /*         Мобильная разметка         */
 
+.page-header__container {
+  padding-top: 15px;
+}
+
 .page-header__main-nav {
   position: relative;
 }
@@ -10,7 +14,7 @@
   align-items: center;
   width: 191px;
   height: 39px;
-  margin-left: 24px;
+  margin-bottom: 15px;
 }
 
 .page-header__logo-image {
@@ -27,9 +31,24 @@
   opacity: 0.5;
 }
 
-.main-nav__toggle {
+.page-header__toggle {
+  position: absolute;
+  top: -43px;
+  right: 0;
+
   width: 25px;
   height: 20px;
+
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  background-image: url('../img/icon-mobile-menu.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover, &:focus   {
+    opacity: 0.7;
+  }
 }
 
 .page-header__list {
@@ -40,17 +59,34 @@
 }
 
 .page-header__item {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 24px 0;
 
-  border-top: 1px solid #ededed;
+  &::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    bottom: 0px;
+    height: 1px;
+    background-color: @border-color;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    top: 0px;
+    height: 1px;
+    background-color: @border-color;
+  }
 }
 
-.page-header__item:last-child {
-  border-bottom: 1px solid #ededed;
-}
 
 .page-header__link {
   margin: 0;
@@ -94,7 +130,7 @@
     margin-right: 95px;
   }
 
-  .main-nav__toggle {
+  .page-header__toggle {
     display: none;
   }
 
@@ -107,14 +143,23 @@
   }
 
   .page-header__item {
-    border: none;
     margin-right: 35px;
   }
 
   .page-header__item:last-child {
-    border: none;
     margin-right: 0;
   }
+
+  .page-header__item {
+
+  &::after {
+    display: none;
+  }
+
+  &::before {
+    display: none;
+  }
+}
 
   .page-header__link {
     margin: 0;
