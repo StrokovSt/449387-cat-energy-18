@@ -94,8 +94,8 @@
   padding: 0;
   padding-right: 25px;
 
-  font-size: 20px;
-  line-height: 24px;
+  font-size: @font-large-mobile-size;
+  line-height: @line-huge-mobile-height;
   text-align: left;
   color: @heading-color;
 
@@ -116,7 +116,7 @@
   border: 1px solid @input-border-major-color;
   outline: none;
 
-  line-height: 1.13;
+  line-height: @line-large-mobile-height;
 }
 
 .cat-form__textarea:hover {
@@ -156,15 +156,15 @@
 
 .cat-form__note {
   font-family: Arial;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: @font-small-mobile-size;
+  line-height: @line-medium-mobile-height;
 }
 
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
 
-    .cat-form__name {
+  .cat-form__name {
     &::before {
       display: none;
     }
@@ -176,11 +176,68 @@
     }
   }
 
+  .cat-form__input {
+    padding: 15px 20px;
+
+    font-size: @font-small-tablet-size;
+    line-height: @line-medium-tablet-height;
+  }
+
+  .cat-form__label {
+    font-size: @font-small-tablet-size;
+    line-height: @line-medium-tablet-height;
+  }
+
+  .cat-form__textarea {
+    padding: 15px 20px;
+
+    font-size: @font-small-tablet-size;
+    line-height: @line-medium-tablet-height;
+  }
+
+  .cat-form__legend {
+    width: auto;
+    padding:0 40px;
+    margin-left: -40px;
+    background-color: white;
+
+    font-size: @font-large-tablet-size;
+    line-height: @line-extra-large-tablet-height;
+  }
+
   .cat-form__list--bordered {
     padding: 0 30px;
     padding-top: 25px;
     padding-bottom: 15px;
     border: 1px solid @border-color;
+  }
+
+  .cat-form__list--addon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .cat-form__item--addon {
+    width: 45%;
+  }
+
+  .cat-form__button-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cat-from__button {
+    width: 283px;
+    margin: 0;
+    margin-right: 60px;
+  }
+
+  .map__text-container--colored {
+    background-color: @background-color;
   }
 
 }

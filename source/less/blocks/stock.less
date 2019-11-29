@@ -1,3 +1,5 @@
+/*         Мобильная разметка         */
+
 .stock {
   display: flex;
   justify-content: center;
@@ -39,3 +41,51 @@
   background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
 }
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+  .stock {
+    justify-content: flex-end;
+    align-items: center;
+    width: 708px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 70px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .stock__description {
+    position: relative;
+
+    width: 160px;
+    margin: 0;
+    margin-right: 125px;
+    padding: 0;
+
+    font-size: @font-extra-small-tablet-size;
+    line-height: @line-medium-tablet-height;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  .stock__description::before {
+    content: "";
+
+    position: absolute;
+    top: -5px;
+    left: -327px;
+
+    display: block;
+    width: 61px;
+    height: 61px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}
+

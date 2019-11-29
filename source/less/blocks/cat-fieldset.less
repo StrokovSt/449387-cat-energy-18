@@ -1,3 +1,5 @@
+/*         Мобильная разметка         */
+
 .cat-fieldset {
   position: relative;
 
@@ -40,4 +42,36 @@
   &::after {
     width: 100%;
   }
+}
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+  .cat-fieldset {
+    &::after {
+      top: 22px;
+      right: -70px;
+      left: -70px;
+    }
+  }
+
+  .cat-fieldset--cat-name {
+    &::after {
+      width: auto;
+    }
+}
+
+  .cat-fieldset--cat-comment {
+    &::after {
+      width: auto;
+    }
+  }
+
+  .cat-fieldset--addon {
+    &::after {
+      width: auto;
+    }
+  }
+
 }
