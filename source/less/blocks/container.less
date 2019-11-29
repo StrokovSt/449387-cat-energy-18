@@ -1,0 +1,29 @@
+.container {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container--no-padding {
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 100%;
+    min-width: @tablet-width;
+    max-width: @desktop-width;
+    padding: 0 30px;
+  }
+
+  .container--no-padding {
+    padding: 0;
+    width: 100%;
+    min-width: @tablet-width;
+    max-width: @desktop-width;
+  }
+}

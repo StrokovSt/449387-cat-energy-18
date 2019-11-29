@@ -1,0 +1,77 @@
+/*         Мобильная разметка         */
+
+.cat-fieldset {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  border: none;
+
+    &::after {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    right: -20px;
+    left: 20px;
+    height: 3px;
+
+    width: 0;
+
+    background-color: @button-color;
+    z-index: -1;
+  }
+
+}
+
+.cat-fieldset--cat-name {
+  &::after {
+    width: 100%;
+  }
+}
+
+.cat-fieldset--cat-comment {
+    &::after {
+      width: 100%;
+  }
+}
+
+.cat-fieldset--addon {
+  &::after {
+    width: 100%;
+  }
+}
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+  .cat-fieldset {
+    &::after {
+      top: 22px;
+      right: -70px;
+      left: -70px;
+    }
+  }
+
+  .cat-fieldset--cat-name {
+    &::after {
+      width: auto;
+    }
+}
+
+  .cat-fieldset--cat-comment {
+    &::after {
+      width: auto;
+    }
+  }
+
+  .cat-fieldset--addon {
+    &::after {
+      width: auto;
+    }
+  }
+
+}

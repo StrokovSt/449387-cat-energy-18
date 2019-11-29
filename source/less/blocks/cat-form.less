@@ -1,0 +1,243 @@
+/*         Мобильная разметка         */
+
+.cat-form__name {
+  margin: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    bottom: 0;
+    height: 1px;
+    background-color: @border-color;
+  }
+}
+
+.cat-form__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.cat-form__item {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 15px;
+}
+
+.cat-form__label {
+  margin-right: 15px;
+
+  line-height: @line-large-mobile-height;
+  text-align: left;
+}
+
+.cat-form__program {
+  margin: 0;
+  padding: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    bottom: 0;
+    height: 1px;
+    background-color: @border-color;
+  }
+}
+
+.car-form__radio:checked + .radio-label::after {
+  content: "";
+
+  position: absolute;
+  left: 11px;
+  top: 5px;
+
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  background-color: @button-color;
+}
+
+.cat-form__input {
+  flex-grow: 1;
+  height: 45px;
+  padding: 0;
+  padding-left: 15px;
+
+  border: 1px solid @input-border-major-color;
+  outline: none;
+
+  line-height: 1.13;
+}
+
+.cat-form__input:hover {
+  border: 1px solid @input-border-color;
+}
+
+.cat-form__input:active,
+.cat-form__input:focus
+{
+  border: 2px solid @text-color;
+}
+
+.cat-form__legend {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  padding-right: 25px;
+
+  font-size: @font-large-mobile-size;
+  line-height: @line-huge-mobile-height;
+  text-align: left;
+  color: @heading-color;
+
+  background-color: #ffffff;
+}
+
+.cat-from__legend--long {
+  width: 180px;
+}
+
+.cat-form__textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 15px;
+  margin: 0;
+
+  border: 1px solid @input-border-major-color;
+  outline: none;
+
+  line-height: @line-large-mobile-height;
+}
+
+.cat-form__textarea:hover {
+  border: 1px solid @input-border-color;
+}
+
+.cat-form__textarea:active,
+.cat-form__textarea:focus
+{
+  border: 2px solid @text-color;
+}
+
+.cat-form__item:last-child > .checkbox-label {
+  margin-bottom: 0;
+}
+
+.cat-form__checkbox:checked + .checkbox-label::before {
+  background-image: url(../img/icon-tick.svg);
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+  background-position: center;
+}
+
+.cat-form__button-container {
+  padding: 0 20px;
+  margin-bottom: 35px;
+
+  text-align: center;
+}
+
+.cat-from__button {
+  margin-bottom: 25px;
+
+  outline: none;
+  border: none;
+}
+
+.cat-form__note {
+  font-family: Arial;
+  font-size: @font-small-mobile-size;
+  line-height: @line-medium-mobile-height;
+}
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+  .cat-form__name {
+    &::before {
+      display: none;
+    }
+  }
+
+  .cat-form__program {
+    &::before {
+      display: none;
+    }
+  }
+
+  .cat-form__input {
+    padding: 15px 20px;
+
+    font-size: @font-small-tablet-size;
+    line-height: @line-medium-tablet-height;
+  }
+
+  .cat-form__label {
+    font-size: @font-small-tablet-size;
+    line-height: @line-medium-tablet-height;
+  }
+
+  .cat-form__textarea {
+    padding: 15px 20px;
+
+    font-size: @font-small-tablet-size;
+    line-height: @line-medium-tablet-height;
+  }
+
+  .cat-form__legend {
+    width: auto;
+    padding:0 40px;
+    margin-left: -40px;
+    background-color: white;
+
+    font-size: @font-large-tablet-size;
+    line-height: @line-extra-large-tablet-height;
+  }
+
+  .cat-form__list--bordered {
+    padding: 0 30px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    border: 1px solid @border-color;
+  }
+
+  .cat-form__list--addon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .cat-form__item--addon {
+    width: 45%;
+  }
+
+  .cat-form__button-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cat-from__button {
+    width: 283px;
+    margin: 0;
+    margin-right: 60px;
+  }
+
+  .map__text-container--colored {
+    background-color: @background-color;
+  }
+
+}

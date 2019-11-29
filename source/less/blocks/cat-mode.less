@@ -1,0 +1,231 @@
+/*         Разметка под телефон         */
+
+.cat-mode__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.cat-mode__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 22px 20px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+
+  background-color: @background-color;
+}
+
+.cat-mode__heading {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  padding-left: 90px;
+
+
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: left;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: @heading-color;
+}
+
+.cat-mode__heading--slim::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  width: 70px;
+  height: 60px;
+
+  background-image: url("../img/slim-cat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cat-mode__heading--pro::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: -7px;
+
+  display: flex;
+  justify-content: flex-start;
+  width: 70px;
+  height: 60px;
+
+  background-image: url("../img/strong-cat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cat-mode__description {
+  display: inline-block;
+  margin: 0;
+  padding: 24px 0;
+  padding-top: 0;
+
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+  text-align: left;
+
+  border-bottom: 1px solid @border-darker-color;
+}
+
+.cat-mode__link {
+  position: relative;
+
+  display: inline-block;
+  padding-right: 50px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 21px;
+
+  text-decoration: none;
+  font-size: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  color:@heading-color;
+}
+
+.cat-mode__link::after {
+  content: "";
+
+  position: absolute;
+  top: 18%;
+  right: 0;
+
+  display: block;
+  width: 34px;
+  height: 12px;
+
+  background-image: url("../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+
+  transition: 0.1s;
+}
+
+.cat-mode__link:hover:after {
+  background-image: url("../img/icon-right-arrow-verylong.svg");
+}
+
+.cat-mode__link:active {
+  color: @cat-link-active-color;
+}
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+  .cat-mode__item {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 70px 55px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+
+    background-color: @background-color;
+  }
+
+  .cat-mode__text-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .cat-mode__heading {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px;
+
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+    .cat-mode__heading--slim::after {
+    display: none;
+  }
+
+  .cat-mode__heading--pro::after {
+    display: none;
+  }
+
+  .cat-mode__text-container--slim::after {
+    content: '';
+
+    position: absolute;
+    top: 20%;
+    right: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    width: 270px;
+    height: 220px;
+
+    background-image: url("../img/cat-slim-tabler.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .cat-mode__text-container--pro::after {
+    content: '';
+
+    position: absolute;
+    top: 20%;
+    right: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    width: 270px;
+    height: 220px;
+
+    background-image: url("../img/cat-pro-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .cat-mode__description {
+    width: 100%;
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    color: @text-color;
+
+    border: none;
+    order: 0;
+  }
+
+  .cat-mode__link {
+    position: relative;
+
+    display: inline-block;
+    width: 160px;
+    margin: 0;
+    margin-bottom: 60px;
+    margin-top: 35px;
+
+    font-size: 20px;
+  }
+
+}

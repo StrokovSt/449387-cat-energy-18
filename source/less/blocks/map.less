@@ -1,0 +1,86 @@
+/*         Мобильная разметка         */
+
+.map__text-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 28px 20px;
+}
+
+.map__text-container-colored {
+  background-color: @background-color;
+}
+
+.map__map-image {
+  display: block;
+  height: 400px;
+}
+
+.map__invite {
+  width: 125px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: left;
+  color: @heading-color;
+  text-transform: uppercase;
+}
+
+.map__adress {
+  padding: 0;
+  margin: 0;
+  width: 135px;
+
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: left;
+}
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+
+  .map {
+    margin-top: 70px;
+  }
+
+  .map__text-container {
+    padding: 65px 70px;
+  }
+
+  .map__text-container-colored {
+    background-color: @background-color;
+  }
+
+  .map__map-image {
+    display: block;
+  }
+
+  .map__invite {
+    width: 155px;
+
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .map__adress-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .map__adress {
+    width: 155px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: right;
+  }
+
+  .map__map-image {
+    height: 400px;
+  }
+
+}
