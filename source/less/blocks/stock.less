@@ -22,24 +22,24 @@
   padding-top: 120px;
 
   font-family: 'Arial', sans-serif;
-  line-height: 1.25;
+  line-height: @extra-large-line-height;
   text-align: center;
   color: #ffffff;
-}
 
-.stock__description::before {
-  content: "";
+  &::before {
+    content: "";
 
-  position: absolute;
-  top: 0;
-  left: 30%;
+    position: absolute;
+    top: 0;
+    left: 30%;
 
-  display: block;
-  width: 61px;
-  height: 61px;
+    display: block;
+    width: 61px;
+    height: 61px;
 
-  background-image: url("../img/icon-gift.svg");
-  background-repeat: no-repeat;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 /*         Разметка под планшет         */
@@ -65,27 +65,70 @@
     margin-right: 125px;
     padding: 0;
 
-    font-size: @font-extra-small-tablet-size;
-    line-height: @line-medium-tablet-height;
+    line-height: @line-extra-large-mobile-height;
     text-align: left;
     color: #ffffff;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -5px;
+      left: -327px;
+
+      display: block;
+      width: 61px;
+      height: 61px;
+
+      background-image: url("../img/icon-gift.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
+}
 
-  .stock__description::before {
-    content: "";
+/*         Разметка под desktop        */
 
-    position: absolute;
-    top: -5px;
-    left: -327px;
+@media (min-width: @desktop-width) {
 
-    display: block;
-    width: 61px;
-    height: 61px;
+  .stock {
+    align-items: flex-end;
+    justify-content: center;
+    width: 245px;
+    height: 290px;
+    margin: 0;
+    padding: 45px 0;
 
-    background-image: url("../img/icon-gift.svg");
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-}
+  .stock__description {
+    position: relative;
 
+    width: 160px;
+    margin: 0;
+    padding: 0;
+
+    line-height: @line-extra-large-mobile-height;
+    text-align: center;
+    color: #ffffff;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -125px;
+      left: 53px;
+
+      display: block;
+      width: 61px;
+      height: 61px;
+
+      background-image: url("../img/icon-gift.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

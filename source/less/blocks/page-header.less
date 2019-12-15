@@ -15,20 +15,17 @@
   width: 191px;
   height: 39px;
   margin-bottom: 15px;
+
+  &:hover, &:focus {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .page-header__logo-image {
   display: block;
-}
-
-.page-header__logo:hover,
-.page-header__logo:focus
-{
-  opacity: 0.7;
-}
-
-.page-header__logo:active {
-  opacity: 0.5;
 }
 
 .page-header__toggle {
@@ -46,7 +43,7 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  &:hover, &:focus   {
+  &:hover, &:focus {
     opacity: 0.7;
   }
 }
@@ -87,24 +84,22 @@
   }
 }
 
-
 .page-header__link {
   margin: 0;
   padding: 5px 0;
 
-  font-size: 20px;
-  line-height: 1.25;
+  font-size: @medium-font-size;
+  line-height: @extra-large-line-height;
+  text-transform: uppercase;
+  white-space: nowrap;
   color: @heading-color;
-}
 
-.page-header__link:hover,
-.page-header__link:focus
-{
-  color: @cat-link-hover-color;
-}
-
-.page-header__link:active {
-  color: @cat-link-active-color;
+  &:hover, &:focus {
+    color: @cat-link-hover-color;
+  }
+  &:active {
+    color: @cat-link-active-color;
+  }
 }
 
 .page-header__link--active {
@@ -119,15 +114,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
   }
 
   .page-header__logo {
     width: 174px;
     height: 59px;
     margin: 0;
-    padding: 0;
     margin-right: 95px;
+    padding: 0;
   }
 
   .page-header__toggle {
@@ -144,30 +138,75 @@
 
   .page-header__item {
     margin-right: 35px;
+
+    &::after {
+      display: none;
+    }
+    &::before {
+      display: none;
+    }
   }
 
   .page-header__item:last-child {
     margin-right: 0;
   }
 
-  .page-header__item {
-
-  &::after {
-    display: none;
-  }
-
-  &::before {
-    display: none;
-  }
-}
-
   .page-header__link {
-    margin: 0;
-    padding: 5px 0;
-
-    font-size: 20px;
-    line-height: 1.25;
+    font-size: @medium-font-size;
+    line-height: @huge-line-height;
     color: @heading-color;
   }
 
+}
+
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+
+  .page-header__link {
+    &:hover, &:focus {
+      color: #ffffff;
+      opacity: 0.6;
+    }
+    &:active {
+      color: #ffffff;
+      opacity: 0.3;
+    }
+  }
+
+  .page-header__link-colored {
+    margin: 0;
+    padding: 5px 0;
+
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .page-header__link--active-colored {
+    border-bottom: 1px solid #ffffff;
+  }
+
+    .page-header__container--background {
+    position: relative;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: 50%;
+      top: 0;
+
+      display: block;
+      width: 720px;
+      height: 700px;
+
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-position: 100% 0;
+      background-repeat: no-repeat;
+
+      z-index: -1;
+    }
+  }
 }

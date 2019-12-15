@@ -73,5 +73,18 @@
       width: auto;
     }
   }
+}
 
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+
+  .cat-fieldset {
+    margin: 0;
+    &::after {
+      top: 22px;
+      right: -30%;
+      left: -30%;
+    }
+  }
 }

@@ -8,8 +8,8 @@
   font-family: 'Oswald', sans-serif;
   text-align: center;
   text-decoration: none;
-  font-size: @font-large-mobile-size;
-  line-height: @line-extra-large-mobile-height;
+  font-size: @small-font-size;
+  line-height: @large-line-height;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
@@ -54,10 +54,23 @@
     padding: 17px 0;
 
     text-align: center;
-    font-size: @font-small-tablet-size;
-    line-height: @line-medium-tablet-height;
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
 
     transition: 0.1s;
   }
 
+  .button--additional {
+    color: @text-color;
+    background-color: #f2f2f2;
+  }
+}
+
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+
+  .button--additional {
+    width: 100%;
+  }
 }

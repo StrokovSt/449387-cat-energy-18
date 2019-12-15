@@ -31,7 +31,7 @@
 .cat-form__label {
   margin-right: 15px;
 
-  line-height: @line-large-mobile-height;
+  line-height: @large-line-height;
   text-align: left;
 }
 
@@ -94,8 +94,8 @@
   padding: 0;
   padding-right: 25px;
 
-  font-size: @font-large-mobile-size;
-  line-height: @line-huge-mobile-height;
+  font-size: @medium-font-size;
+  line-height: @huge-line-height;
   text-align: left;
   color: @heading-color;
 
@@ -116,7 +116,7 @@
   border: 1px solid @input-border-major-color;
   outline: none;
 
-  line-height: @line-large-mobile-height;
+  line-height: @large-line-height;
 }
 
 .cat-form__textarea:hover {
@@ -136,13 +136,13 @@
 .cat-form__checkbox:checked + .checkbox-label::before {
   background-image: url(../img/icon-tick.svg);
   background-repeat: no-repeat;
-  background-size: 70% 70%;
+  background-size: 50%;
   background-position: center;
 }
 
 .cat-form__button-container {
-  padding: 0 20px;
   margin-bottom: 35px;
+  padding: 0;
 
   text-align: center;
 }
@@ -156,8 +156,8 @@
 
 .cat-form__note {
   font-family: Arial;
-  font-size: @font-small-mobile-size;
-  line-height: @line-medium-mobile-height;
+  font-size: @small-font-size;
+  line-height: @medium-line-height;
 }
 
 /*         Разметка под планшет         */
@@ -179,30 +179,30 @@
   .cat-form__input {
     padding: 15px 20px;
 
-    font-size: @font-small-tablet-size;
-    line-height: @line-medium-tablet-height;
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
   }
 
   .cat-form__label {
-    font-size: @font-small-tablet-size;
-    line-height: @line-medium-tablet-height;
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
   }
 
   .cat-form__textarea {
     padding: 15px 20px;
 
-    font-size: @font-small-tablet-size;
-    line-height: @line-medium-tablet-height;
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
   }
 
   .cat-form__legend {
     width: auto;
-    padding:0 40px;
+    padding: 0 40px;
     margin-left: -40px;
     background-color: white;
 
-    font-size: @font-large-tablet-size;
-    line-height: @line-extra-large-tablet-height;
+    font-size: @extra-large-font-size;
+    line-height: @extra-huge-line-height;
   }
 
   .cat-form__list--bordered {
@@ -235,9 +235,80 @@
     margin: 0;
     margin-right: 60px;
   }
+}
 
-  .map__text-container--colored {
-    background-color: @background-color;
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+
+  .cat-form__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
+  .cat-form__item:last-child {
+    margin: 0;
+  }
+
+  .cat-form__program,
+  .cat-form__name {
+    width: 570px;
+  }
+
+  .cat-form__list {
+    margin: 70px 0;
+  }
+
+  .cat-form__textarea {
+    margin: 70px 0;
+  }
+
+  .cat-form__item {
+    width: 570px;
+    margin-bottom: 20px;
+  }
+
+  .car-form__radio:checked + .radio-label::after {
+    content: "";
+
+    position: absolute;
+    left: 11px;
+    top: 2px;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    background-color: @button-color;
+  }
+
+  .cat-form__list--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .cat-form__legend {
+    width: auto;
+    margin: 0;
+    margin-left: -40px;
+    padding: 0 40px;
+  }
+
+  .cat-form__item--addon {
+    width: 25%;
+  }
+
+  .cat-form__list--addon {
+    margin: 50px 0 30px 0;
+  }
+
+  .cat-from__button {
+    width: 568px;
+  }
+
+  .cat-form__note {
+    font-size: @little-font-size;
+  }
 }
