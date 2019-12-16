@@ -64,16 +64,25 @@
   background-color: @button-color;
 }
 
+.car-form__radio:disabled + .radio-label::after {
+  opacity: 0.3;
+}
+
+.car-form__radio:disabled + .radio-label {
+  opacity: 0.3;
+}
+
 .cat-form__input {
   flex-grow: 1;
   height: 45px;
   padding: 0;
   padding-left: 15px;
 
-  border: 1px solid @input-border-major-color;
-  outline: none;
-
   line-height: 1.13;
+
+  border: 1px solid @input-border-major-color;
+  background-color: #ffffff;
+  outline: none;
 }
 
 .cat-form__input:hover {
@@ -84,6 +93,24 @@
 .cat-form__input:focus
 {
   border: 2px solid @text-color;
+}
+
+.cat-form__input:invalid {
+  border: 2px solid @border-invalid-color;
+}
+
+.cat-form__input--email {
+  background-image: url(../img/icon-mail.svg);
+  background-repeat: no-repeat;
+  background-size: 18px 14px;
+  background-position: 97% 50%;
+}
+
+.cat-form__input--tel {
+  background-image: url(../img/icon-phone.svg);
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  background-position: 97% 50%;
 }
 
 .cat-form__legend {
@@ -136,8 +163,16 @@
 .cat-form__checkbox:checked + .checkbox-label::before {
   background-image: url(../img/icon-tick.svg);
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 55%;
   background-position: center;
+}
+
+.cat-form__checkbox:disabled + .rcheckbox-label::after {
+  opacity: 0.4;
+}
+
+.cat-form__checkbox:disabled + .checkbox-label {
+  opacity: 0.4;
 }
 
 .cat-form__button-container {
