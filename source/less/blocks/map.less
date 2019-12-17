@@ -11,9 +11,9 @@
   padding: 28px 20px;
 }
 
-  .map__text-container--colored {
-    background-color: @background-color;
-  }
+.map__text-container--colored {
+  background-color: @background-color;
+}
 
 .map__map-image {
   display: block;
@@ -25,7 +25,7 @@
   width: 125px;
 
   font-size: @little-font-size;
-  line-height:@extra-large-line-height;
+  line-height: @extra-large-line-height;
   text-align: left;
   color: @heading-color;
   text-transform: uppercase;
@@ -36,7 +36,7 @@
   margin: 0;
   width: 135px;
 
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: @small-font-size;
   line-height: @extra-large-line-height;
   text-align: left;
@@ -45,7 +45,6 @@
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-
   .map {
     margin-top: 70px;
   }
@@ -56,6 +55,7 @@
 
   .map__map-image {
     display: block;
+    height: 400px;
   }
 
   .map__invite {
@@ -79,16 +79,11 @@
     line-height: @extra-large-line-height;
     text-align: right;
   }
-
-  .map__map-image {
-    height: 400px;
-  }
 }
 
 /*         Разметка под компуктер         */
 
 @media (min-width: @desktop-width) {
-
   .map {
     position: relative;
   }

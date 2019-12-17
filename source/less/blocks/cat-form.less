@@ -4,7 +4,7 @@
   margin: 0;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -20px;
     right: -20px;
@@ -40,7 +40,7 @@
   padding: 0;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -20px;
     right: -20px;
@@ -90,8 +90,7 @@
 }
 
 .cat-form__input:active,
-.cat-form__input:focus
-{
+.cat-form__input:focus {
   border: 2px solid @text-color;
 }
 
@@ -100,14 +99,14 @@
 }
 
 .cat-form__input--email {
-  background-image: url(../img/icon-mail.svg);
+  background-image: url("../img/icon-mail.svg");
   background-repeat: no-repeat;
   background-size: 18px 14px;
   background-position: 97% 50%;
 }
 
 .cat-form__input--tel {
-  background-image: url(../img/icon-phone.svg);
+  background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-size: 21px 21px;
   background-position: 97% 50%;
@@ -129,7 +128,7 @@
   background-color: #ffffff;
 }
 
-.cat-from__legend--long {
+.cat-form__legend--long {
   width: 180px;
 }
 
@@ -151,8 +150,7 @@
 }
 
 .cat-form__textarea:active,
-.cat-form__textarea:focus
-{
+.cat-form__textarea:focus {
   border: 2px solid @text-color;
 }
 
@@ -161,7 +159,7 @@
 }
 
 .cat-form__checkbox:checked + .checkbox-label::before {
-  background-image: url(../img/icon-tick.svg);
+  background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-size: 55%;
   background-position: center;
@@ -182,7 +180,7 @@
   text-align: center;
 }
 
-.cat-from__button {
+.cat-form__button {
   margin-bottom: 25px;
 
   outline: none;
@@ -190,7 +188,7 @@
 }
 
 .cat-form__note {
-  font-family: Arial;
+  font-family: "Arial", sans-serif;
   font-size: @small-font-size;
   line-height: @medium-line-height;
 }
@@ -198,7 +196,6 @@
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-
   .cat-form__name {
     &::before {
       display: none;
@@ -247,14 +244,14 @@
     border: 1px solid @border-color;
   }
 
-  .cat-form__list--addon {
+  .cat-fieldset--addon .cat-form__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
   }
 
-  .cat-form__item--addon {
+  .cat-fieldset--addon .cat-form__item {
     width: 45%;
   }
 
@@ -265,7 +262,7 @@
     padding: 0;
   }
 
-  .cat-from__button {
+  .cat-form__button {
     width: 283px;
     margin: 0;
     margin-right: 60px;
@@ -275,24 +272,26 @@
 /*         Разметка под desktop        */
 
 @media (min-width: @desktop-width) {
-
   .cat-form__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  .cat-form__input--email {
+    margin-right: 80px;
+  }
+
   .cat-form__item:last-child {
     margin: 0;
   }
 
-  .cat-form__program,
-  .cat-form__name {
-    width: 570px;
-  }
-
   .cat-form__list {
     margin: 70px 0;
+  }
+
+  .cat-form__comment {
+    width: 100%;
   }
 
   .cat-form__textarea {
@@ -302,6 +301,20 @@
   .cat-form__item {
     width: 570px;
     margin-bottom: 20px;
+  }
+
+  .cat-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .cat-form__list--bordered {
+    width: 570px;
+    padding: 0 30px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    border: 1px solid @border-color;
   }
 
   .cat-form__radio:checked + .radio-label::after {
@@ -331,15 +344,15 @@
     padding: 0 40px;
   }
 
-  .cat-form__item--addon {
+  .cat-fieldset--addon .cat-form__item {
     width: 25%;
   }
 
-  .cat-form__list--addon {
+  .cat-fieldset--addon .cat-form__list {
     margin: 50px 0 30px 0;
   }
 
-  .cat-from__button {
+  .cat-form__button {
     width: 568px;
   }
 

@@ -1,6 +1,6 @@
 /*         Мобильная разметка         */
 
-.page-header__container {
+.page-header {
   padding-top: 15px;
 }
 
@@ -16,9 +16,11 @@
   height: 39px;
   margin-bottom: 15px;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     opacity: 0.7;
   }
+
   &:active {
     opacity: 0.5;
   }
@@ -39,11 +41,12 @@
   border: none;
   outline: none;
   background-color: #ffffff;
-  background-image: url('../img/icon-mobile-menu.svg');
+  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     opacity: 0.7;
   }
 }
@@ -64,24 +67,23 @@
   padding: 24px 0;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -20px;
     right: -20px;
-    top: 0px;
+    top: 0;
     height: 1px;
     background-color: @border-color;
   }
 }
 
 .page-header__item:last-child {
-
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: -20px;
     right: -20px;
-    bottom: 0px;
+    bottom: 0;
     height: 1px;
     background-color: @border-color;
   }
@@ -97,9 +99,11 @@
   white-space: nowrap;
   color: @heading-color;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: @cat-link-hover-color;
   }
+
   &:active {
     color: @cat-link-active-color;
   }
@@ -112,8 +116,7 @@
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-
-  .page-header__container {
+  .page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,6 +148,7 @@
     &::after {
       display: none;
     }
+
     &::before {
       display: none;
     }
@@ -159,14 +163,12 @@
     line-height: @huge-line-height;
     color: @heading-color;
   }
-
 }
 
 /*         Разметка под desktop        */
 
 @media (min-width: @desktop-width) {
-
-  .page-header__link-colored {
+  .page-header__link--colored {
     margin: 0;
     padding: 5px 0;
 
@@ -175,10 +177,12 @@
     text-transform: uppercase;
     color: #ffffff;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: #ffffff;
       opacity: 0.6;
     }
+
     &:active {
       color: #ffffff;
       opacity: 0.3;
@@ -189,11 +193,11 @@
     border-bottom: 1px solid #ffffff;
   }
 
-    .page-header__container--background {
+  .page-header--background {
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
 
       position: absolute;
       left: 50%;

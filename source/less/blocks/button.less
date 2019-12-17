@@ -5,12 +5,11 @@
   width: 100%;
   padding: 13px 0;
 
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: center;
   text-decoration: none;
   font-size: @small-font-size;
   line-height: @large-line-height;
-  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
 
@@ -18,36 +17,34 @@
   background-color: @button-color;
 
   transition: 0.1s;
-}
 
-.button:hover,
-.button:focus {
-  background-color: @button-hover-color;
-}
+  &:hover,
+  &:focus {
+    background-color: @button-hover-color;
+  }
 
-.button:active {
-  color: @button-link-main-color;
+  &:active {
+    color: @button-link-main-color;
+  }
 }
 
 .button--additional {
   color: @text-color;
   background-color: #f2f2f2;
-}
 
-.button--additional:hover,
-.button--additional:focus
-{
-  background-color: @button-additional-hover-color;
-}
+  &:hover,
+  &:focus {
+    background-color: @button-additional-hover-color;
+  }
 
-.button--additional:active {
-  color: @button-link-major-color;
+  &:active {
+    color: @button-link-major-color;
+  }
 }
 
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-
   .button {
     display: block;
     width: 250px;
@@ -69,7 +66,6 @@
 /*         Разметка под desktop        */
 
 @media (min-width: @desktop-width) {
-
   .button--additional {
     width: 100%;
   }

@@ -2,22 +2,23 @@
 
 .page-footer {
   text-align: center;
-}
 
-.page-footer__container {
   background-color: @background-color;
 }
 
-.page-footer__logo{
+
+.page-footer__logo {
   display: flex;
   justify-content: center;
   align-items: center;
 
   transition: 0.2s;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -46,7 +47,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
-  padding:  0;
+  padding: 0;
 
   list-style: none;
 }
@@ -69,8 +70,7 @@
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-
-  .page-footer__container {
+  .page-footer {
     display: flex;
     justify-content: space-between;
     padding-top: 63px;
@@ -80,7 +80,7 @@
   }
 
   .page-footer__logo-image {
-    margin:  0;
+    margin: 0;
     padding: 0;
   }
 
@@ -94,8 +94,7 @@
     padding: 0;
   }
 
-  .copyright__item:last-child  {
+  .copyright__item:last-child {
     margin-left: 23px;
   }
-
 }
