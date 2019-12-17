@@ -9,7 +9,7 @@
 
   border: none;
 
-    &::after {
+  &::after {
     content: "";
 
     position: absolute;
@@ -23,7 +23,6 @@
     background-color: @button-color;
     z-index: -1;
   }
-
 }
 
 .cat-fieldset--cat-name {
@@ -33,8 +32,8 @@
 }
 
 .cat-fieldset--cat-comment {
-    &::after {
-      width: 100%;
+  &::after {
+    width: 100%;
   }
 }
 
@@ -47,7 +46,6 @@
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-
   .cat-fieldset {
     &::after {
       top: 22px;
@@ -60,7 +58,7 @@
     &::after {
       width: auto;
     }
-}
+  }
 
   .cat-fieldset--cat-comment {
     &::after {
@@ -73,5 +71,18 @@
       width: auto;
     }
   }
+}
 
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+  .cat-fieldset {
+    margin: 0;
+
+    &::after {
+      top: 22px;
+      right: -30%;
+      left: -30%;
+    }
+  }
 }

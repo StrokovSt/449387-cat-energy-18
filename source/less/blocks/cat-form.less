@@ -4,7 +4,7 @@
   margin: 0;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -20px;
     right: -20px;
@@ -31,7 +31,7 @@
 .cat-form__label {
   margin-right: 15px;
 
-  line-height: @line-large-mobile-height;
+  line-height: @large-line-height;
   text-align: left;
 }
 
@@ -40,7 +40,7 @@
   padding: 0;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -20px;
     right: -20px;
@@ -50,7 +50,7 @@
   }
 }
 
-.car-form__radio:checked + .radio-label::after {
+.cat-form__radio:checked + .radio-label::after {
   content: "";
 
   position: absolute;
@@ -64,16 +64,25 @@
   background-color: @button-color;
 }
 
+.cat-form__radio:disabled + .radio-label::after {
+  opacity: 0.3;
+}
+
+.cat-form__radio:disabled + .radio-label {
+  opacity: 0.3;
+}
+
 .cat-form__input {
   flex-grow: 1;
   height: 45px;
   padding: 0;
   padding-left: 15px;
 
-  border: 1px solid @input-border-major-color;
-  outline: none;
-
   line-height: 1.13;
+
+  border: 1px solid @input-border-major-color;
+  background-color: #ffffff;
+  outline: none;
 }
 
 .cat-form__input:hover {
@@ -81,9 +90,26 @@
 }
 
 .cat-form__input:active,
-.cat-form__input:focus
-{
+.cat-form__input:focus {
   border: 2px solid @text-color;
+}
+
+.cat-form__input:invalid {
+  border: 2px solid @border-invalid-color;
+}
+
+.cat-form__input--email {
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 14px;
+  background-position: 97% 50%;
+}
+
+.cat-form__input--tel {
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  background-position: 97% 50%;
 }
 
 .cat-form__legend {
@@ -94,15 +120,15 @@
   padding: 0;
   padding-right: 25px;
 
-  font-size: @font-large-mobile-size;
-  line-height: @line-huge-mobile-height;
+  font-size: @medium-font-size;
+  line-height: @huge-line-height;
   text-align: left;
   color: @heading-color;
 
   background-color: #ffffff;
 }
 
-.cat-from__legend--long {
+.cat-form__legend--long {
   width: 180px;
 }
 
@@ -116,7 +142,7 @@
   border: 1px solid @input-border-major-color;
   outline: none;
 
-  line-height: @line-large-mobile-height;
+  line-height: @large-line-height;
 }
 
 .cat-form__textarea:hover {
@@ -124,8 +150,7 @@
 }
 
 .cat-form__textarea:active,
-.cat-form__textarea:focus
-{
+.cat-form__textarea:focus {
   border: 2px solid @text-color;
 }
 
@@ -134,20 +159,28 @@
 }
 
 .cat-form__checkbox:checked + .checkbox-label::before {
-  background-image: url(../img/icon-tick.svg);
+  background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
-  background-size: 70% 70%;
+  background-size: 55%;
   background-position: center;
 }
 
+.cat-form__checkbox:disabled + .rcheckbox-label::after {
+  opacity: 0.4;
+}
+
+.cat-form__checkbox:disabled + .checkbox-label {
+  opacity: 0.4;
+}
+
 .cat-form__button-container {
-  padding: 0 20px;
   margin-bottom: 35px;
+  padding: 0;
 
   text-align: center;
 }
 
-.cat-from__button {
+.cat-form__button {
   margin-bottom: 25px;
 
   outline: none;
@@ -155,15 +188,14 @@
 }
 
 .cat-form__note {
-  font-family: Arial;
-  font-size: @font-small-mobile-size;
-  line-height: @line-medium-mobile-height;
+  font-family: "Arial", sans-serif;
+  font-size: @small-font-size;
+  line-height: @medium-line-height;
 }
 
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-
   .cat-form__name {
     &::before {
       display: none;
@@ -179,30 +211,30 @@
   .cat-form__input {
     padding: 15px 20px;
 
-    font-size: @font-small-tablet-size;
-    line-height: @line-medium-tablet-height;
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
   }
 
   .cat-form__label {
-    font-size: @font-small-tablet-size;
-    line-height: @line-medium-tablet-height;
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
   }
 
   .cat-form__textarea {
     padding: 15px 20px;
 
-    font-size: @font-small-tablet-size;
-    line-height: @line-medium-tablet-height;
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
   }
 
   .cat-form__legend {
     width: auto;
-    padding:0 40px;
+    padding: 0 40px;
     margin-left: -40px;
     background-color: white;
 
-    font-size: @font-large-tablet-size;
-    line-height: @line-extra-large-tablet-height;
+    font-size: @extra-large-font-size;
+    line-height: @extra-huge-line-height;
   }
 
   .cat-form__list--bordered {
@@ -212,14 +244,14 @@
     border: 1px solid @border-color;
   }
 
-  .cat-form__list--addon {
+  .cat-fieldset--addon .cat-form__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
   }
 
-  .cat-form__item--addon {
+  .cat-fieldset--addon .cat-form__item {
     width: 45%;
   }
 
@@ -230,14 +262,101 @@
     padding: 0;
   }
 
-  .cat-from__button {
+  .cat-form__button {
     width: 283px;
     margin: 0;
     margin-right: 60px;
   }
+}
 
-  .map__text-container--colored {
-    background-color: @background-color;
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+  .cat-form__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
+  .cat-form__input--email {
+    margin-right: 80px;
+  }
+
+  .cat-form__item:last-child {
+    margin: 0;
+  }
+
+  .cat-form__list {
+    margin: 70px 0;
+  }
+
+  .cat-form__comment {
+    width: 100%;
+  }
+
+  .cat-form__textarea {
+    margin: 70px 0;
+  }
+
+  .cat-form__item {
+    width: 570px;
+    margin-bottom: 20px;
+  }
+
+  .cat-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .cat-form__list--bordered {
+    width: 570px;
+    padding: 0 30px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    border: 1px solid @border-color;
+  }
+
+  .cat-form__radio:checked + .radio-label::after {
+    content: "";
+
+    position: absolute;
+    left: 11px;
+    top: 2px;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    background-color: @button-color;
+  }
+
+  .cat-form__list--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .cat-form__legend {
+    width: auto;
+    margin: 0;
+    margin-left: -40px;
+    padding: 0 40px;
+  }
+
+  .cat-fieldset--addon .cat-form__item {
+    width: 25%;
+  }
+
+  .cat-fieldset--addon .cat-form__list {
+    margin: 50px 0 30px 0;
+  }
+
+  .cat-form__button {
+    width: 568px;
+  }
+
+  .cat-form__note {
+    font-size: @little-font-size;
+  }
 }

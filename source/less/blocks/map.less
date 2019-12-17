@@ -1,5 +1,9 @@
 /*         Мобильная разметка         */
 
+.map {
+  padding: 0;
+}
+
 .map__text-container {
   display: flex;
   justify-content: space-between;
@@ -7,20 +11,21 @@
   padding: 28px 20px;
 }
 
-.map__text-container-colored {
+.map__text-container--colored {
   background-color: @background-color;
 }
 
 .map__map-image {
   display: block;
   height: 400px;
+  width: 100%;
 }
 
 .map__invite {
   width: 125px;
 
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: @little-font-size;
+  line-height: @extra-large-line-height;
   text-align: left;
   color: @heading-color;
   text-transform: uppercase;
@@ -31,16 +36,15 @@
   margin: 0;
   width: 135px;
 
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  line-height: 1.43;
+  font-family: "Arial", sans-serif;
+  font-size: @small-font-size;
+  line-height: @extra-large-line-height;
   text-align: left;
 }
 
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-
   .map {
     margin-top: 70px;
   }
@@ -49,19 +53,16 @@
     padding: 65px 70px;
   }
 
-  .map__text-container-colored {
-    background-color: @background-color;
-  }
-
   .map__map-image {
     display: block;
+    height: 400px;
   }
 
   .map__invite {
     width: 155px;
 
-    font-size: 20px;
-    line-height: 1.25;
+    font-size: @medium-font-size;
+    line-height: @huge-line-height;
   }
 
   .map__adress-container {
@@ -74,13 +75,30 @@
   .map__adress {
     width: 155px;
 
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: @little-font-size;
+    line-height: @extra-large-line-height;
     text-align: right;
   }
+}
 
-  .map__map-image {
-    height: 400px;
+/*         Разметка под компуктер         */
+
+@media (min-width: @desktop-width) {
+  .map {
+    position: relative;
   }
 
+  .map__text-container {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+
+    width: 570px;
+
+    background-color: #ffffff;
+  }
+
+  .map__text-container--colored {
+    background-color: #ffffff;
+  }
 }

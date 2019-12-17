@@ -2,17 +2,31 @@
 
 .page-footer {
   text-align: center;
-}
-
-.page-footer__container {
-  padding: 0 20px;
 
   background-color: @background-color;
 }
 
+
+.page-footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .page-footer__logo-image {
-  margin: 35px 0;
-  padding: 0;
+  margin: 0;
+  padding: 35px 0;
 }
 
 .page-footer__social {
@@ -20,7 +34,7 @@
   flex-direction: row;
   justify-content: center;
   margin: 0;
-  padding: 25px 0;
+  padding: 0;
 
   list-style: none;
   border-top: 1px solid @border-darker-color;
@@ -33,25 +47,40 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
-  padding: 25px 0;
+  padding: 0;
 
   list-style: none;
+}
+
+.page-footer__logo-svg {
+  margin: 25px 0;
+
+  transition: 0.2s;
+}
+
+.page-footer__logo-svg:hover,
+.page-footer__logo-svg:focus {
+  fill: @button-color;
+}
+
+.page-footer__logo-svg:active {
+  opacity: 0.3;
 }
 
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-
-  .page-footer__container {
+  .page-footer {
     display: flex;
     justify-content: space-between;
-    padding: 63px 30px;
+    padding-top: 63px;
+    padding-bottom: 63px;
 
     background-color: @background-color;
   }
 
   .page-footer__logo-image {
-    margin:  0;
+    margin: 0;
     padding: 0;
   }
 
@@ -65,8 +94,7 @@
     padding: 0;
   }
 
-  .copyright__item:last-child  {
+  .copyright__item:last-child {
     margin-left: 23px;
   }
-
 }

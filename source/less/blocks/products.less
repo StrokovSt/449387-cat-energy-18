@@ -17,11 +17,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 25px;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: -20px;
     right: -20px;
@@ -31,46 +31,61 @@
   }
 }
 
+.products__item:first-child {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    top: 0;
+    height: 1px;
+    background-color: @border-color;
+  }
+}
+
 .products__product-image {
   display: block;
 }
 
-.products__info-caontainer {
-  width: 140px;
-  margin-top: 25px;
+.products__info-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
 }
 
 .products__heading {
-  width: 75px;
+  width: 65%;
   margin: 0;
+  margin-top: 25px;
   margin-bottom: 15px;
   padding: 0;
 
-  font-size: @font-medium-mobile-size;
-  line-height: @line-extra-large-mobile-height;
+  font-size: @medium-line-height;
+  line-height: @extra-large-line-height;
   text-align: left;
   text-transform: uppercase;
   color: @heading-color;
 }
 
 .products__table {
-  width: 100%;
+  width: 165px;
   margin-bottom: 25px;
   border-collapse: collapse;
 }
 
 .products__field {
-  font-family: 'Arial', sans-serif;
-  font-size: @font-small-mobile-size;
-  line-height: @line-medium-mobile-height;
+  font-family: "Arial", sans-serif;
+  font-size: @extra-small-font-size;
+  line-height: @medium-line-height;
   text-align: left;
   font-weight: normal;
 }
 
 .products__value {
-  font-family: 'Arial', sans-serif;
-  font-size: @font-small-mobile-size;
-  line-height: @line-medium-mobile-height;
+  font-family: "Arial", sans-serif;
+  font-size: @extra-small-font-size;
+  line-height: @medium-line-height;
   text-align: right;
 }
 
@@ -87,8 +102,8 @@
   padding-top: 80px;
   margin-bottom: 10px;
 
-  font-size: @font-large-mobile-size;
-  line-height:@line-extra-large-mobile-height;
+  font-size: @medium-font-size;
+  line-height: @extra-huge-line-height;
   color: @heading-color;
   font-weight: normal;
 
@@ -112,15 +127,14 @@
   margin: 0;
   margin-bottom: 20px;
 
-  font-family: 'Arial', sans-serif;
-  font-size: @font-extra-small-mobile-size;
-  line-height: @line-medium-mobile-height;
+  font-family: "Arial", sans-serif;
+  font-size: @extra-small-font-size;
+  line-height: @medium-line-height;
 }
 
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-
   .products {
     border-bottom: none;
   }
@@ -155,7 +169,7 @@
     margin-bottom: 40px;
   }
 
-  .products__info-caontainer {
+  .products__info-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -171,8 +185,8 @@
     width: 135px;
     margin-bottom: 25px;
 
-    font-size: @font-small-tablet-size;
-    line-height: @line-medium-tablet-height;
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
     text-align: center;
   }
 
@@ -182,15 +196,15 @@
   }
 
   .products__field {
-    font-size: @font-extra-small-tablet-size;
-    line-height: @line-small-tablet-height;
+    font-size: @little-font-size;
+    line-height: @medium-line-height;
     border-bottom: 1px solid @border-darker-color;
     padding: 5px 0;
   }
 
   .products__value {
-    font-size: @font-extra-small-tablet-size;
-    line-height: @line-small-tablet-height;
+    font-size: @little-font-size;
+    line-height: @medium-line-height;
     border-bottom: 1px solid @border-darker-color;
     padding: 5px 0;
   }
@@ -201,6 +215,8 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    text-align: center;
   }
 
   .products__item--additional {
@@ -208,17 +224,13 @@
     background-color: #ffffff;
   }
 
-  .products__additional-container {
-    text-align: center;
-  }
-
   .products__implication {
     width: 135px;
     padding-top: 165px;
     margin-bottom: 10px;
 
-    font-size: @font-small-tablet-size;
-    line-height:@line-medium-tablet-height;
+    font-size: @little-font-size;
+    line-height: @extra-large-line-height;
 
     &::after {
       left: 40px;
@@ -231,8 +243,16 @@
   .products__description {
     width: 170px;
 
-    font-size: @font-extra-small-tablet-size;
-    line-height: @line-medium-mobile-height;
+    font-size: @little-font-size;
+    line-height: @medium-line-height;
   }
+}
 
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+  .products__item {
+    width: 245px;
+    margin-top: 140px;
+  }
 }

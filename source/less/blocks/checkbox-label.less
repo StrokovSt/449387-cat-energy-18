@@ -3,7 +3,7 @@
 .checkbox-label {
   position: relative;
 
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   padding-left: 46px;
 }
 
@@ -22,6 +22,22 @@
   transform: translateY(-20%);
 }
 
-.checkbox-label:hover:before {
+.checkbox-label:hover::before {
   border: 1px solid @input-border-color;
+}
+
+/*         Разметка под планшет         */
+
+@media (min-width: @tablet-width) {
+  .checkbox-label {
+    margin-bottom: 30px;
+  }
+}
+
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+  .checkbox-label {
+    margin-bottom: 0;
+  }
 }
