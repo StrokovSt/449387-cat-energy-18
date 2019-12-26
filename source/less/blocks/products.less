@@ -43,15 +43,21 @@
   }
 }
 
+.products__item--additional {
+  justify-content: center;
+}
+
 .products__product-image {
   display: block;
+  width: 144px;
+  height: 144px;
 }
 
 .products__info-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 50%;
+  width: 45%;
 }
 
 .products__heading {
@@ -89,12 +95,6 @@
   text-align: right;
 }
 
-.products__additional {
-  width: 100%;
-
-  text-align: center;
-}
-
 .products__implication {
   position: relative;
 
@@ -102,8 +102,10 @@
   padding-top: 80px;
   margin-bottom: 10px;
 
-  font-size: @medium-font-size;
-  line-height: @extra-huge-line-height;
+  font-size: @little-font-size;
+  line-height: @extra-large-line-height;
+  text-align: center;
+  text-transform: uppercase;
   color: @heading-color;
   font-weight: normal;
 
@@ -112,7 +114,7 @@
 
     position: absolute;
     top: 27px;
-    left: 100px;
+    left: 90px;
 
     display: block;
     width: 31px;
@@ -120,16 +122,20 @@
 
     background-image: url("../img/icon-plus.svg");
     background-repeat: no-repeat;
+
+    opacity: 0.2;
   }
 }
 
 .products__description {
+  width: 100%;
   margin: 0;
   margin-bottom: 20px;
 
   font-family: "Arial", sans-serif;
   font-size: @extra-small-font-size;
   line-height: @medium-line-height;
+  text-align: center;
 }
 
 /*         Разметка под планшет         */
@@ -153,10 +159,11 @@
     align-items: flex-start;
     justify-content: center;
     width: 325px;
-    padding: 38px;
+    padding: 0;
     margin-top: 140px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 40px;
 
     background-color: @background-color;
 
@@ -165,8 +172,26 @@
     }
   }
 
+  .products__item:first-child {
+    &::before {
+      display: none;
+    }
+  }
+
   .products__product-image {
-    margin-bottom: 40px;
+    position: absolute;
+    left: 0;
+    top: -40px;
+
+    display: block;
+    width: auto;
+    height: 172px;
+  }
+
+  .products__product-image--big {
+    top: -80px;
+
+    height: 208px;
   }
 
   .products__info-container {
@@ -175,7 +200,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 0;
+    margin: 0 38px;
     padding: 0;
 
     text-align: center;
@@ -183,7 +208,9 @@
 
   .products__heading {
     width: 135px;
+    margin-top: 0;
     margin-bottom: 25px;
+    padding-top: 165px;
 
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
@@ -209,17 +236,12 @@
     padding: 5px 0;
   }
 
-  .products__additional {
+  .products__item--additional {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
 
-    text-align: center;
-  }
-
-  .products__item--additional {
     border: 1px solid @border-color;
     background-color: #ffffff;
   }
@@ -227,9 +249,9 @@
   .products__implication {
     width: 135px;
     padding-top: 165px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 
-    font-size: @little-font-size;
+    font-size: @medium-font-size;
     line-height: @extra-large-line-height;
 
     &::after {
@@ -242,6 +264,7 @@
 
   .products__description {
     width: 170px;
+    margin-bottom: 50px;
 
     font-size: @little-font-size;
     line-height: @medium-line-height;
@@ -254,5 +277,15 @@
   .products__item {
     width: 245px;
     margin-top: 140px;
+  }
+
+  .products__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 169px;
+    height: 40px;
+
+    font-size: @little-font-size;
   }
 }

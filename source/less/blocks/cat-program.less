@@ -64,15 +64,15 @@
 
 @media (min-width: @tablet-width) {
   .cat-program {
+    position: relative;
+
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
     min-height: 850px;
+    margin: 0 auto;
     padding: 0 90px;
-
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-position: 40% 100%;
   }
 
   .cat-program::after {
@@ -104,7 +104,13 @@
   }
 
   .cat-program__product-image {
-    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    width: 709px;
   }
 }
 
@@ -113,12 +119,10 @@
 @media (min-width: @desktop-width) {
   .cat-program {
     min-height: 600px;
+    margin: 0;
     margin-bottom: 60px;
     margin-top: 30px;
     padding: 0 80px;
-
-    background-image: url("../img/index-can-desktop@1x.png");
-    background-position: 68% 0;
   }
 
   .cat-program__heading {
@@ -127,5 +131,12 @@
 
   .cat-program__slogan {
     margin-bottom: 50px;
+  }
+
+  .cat-program__product-image {
+    left: 37%;
+    bottom: 17%;
+
+    width: 552px;
   }
 }
