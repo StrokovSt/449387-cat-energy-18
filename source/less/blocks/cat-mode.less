@@ -116,9 +116,6 @@
 
   background-image: url("../img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;
-  background-position: 0 50%;
-
-  transition: 0.1s;
 }
 
 .cat-mode__link:hover::after {
@@ -127,6 +124,10 @@
 
 .cat-mode__link:active {
   color: @cat-link-active-color;
+}
+
+.cat-mode__link:active::after {
+  opacity: 0.2;
 }
 
 /*         Разметка под планшет         */

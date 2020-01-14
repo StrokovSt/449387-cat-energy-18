@@ -5,11 +5,14 @@
 
   &::before {
     content: "";
+
     position: absolute;
     left: -20px;
     right: -20px;
     bottom: 0;
+
     height: 1px;
+
     background-color: @border-color;
   }
 }
@@ -41,11 +44,14 @@
 
   &::before {
     content: "";
+
     position: absolute;
     left: -20px;
     right: -20px;
     bottom: 0;
+
     height: 1px;
+
     background-color: @border-color;
   }
 }
@@ -75,41 +81,58 @@
 .cat-form__input {
   flex-grow: 1;
   height: 45px;
-  padding: 0;
+  padding: 1;
   padding-left: 15px;
 
-  line-height: 1.13;
+  line-height: @large-line-height;
 
   border: 1px solid @input-border-major-color;
   background-color: #ffffff;
   outline: none;
+
+  &:hover {
+    border: 1px solid @input-border-color;
+  }
+
+  &:active,
+  &:focus {
+    padding: 0;
+    padding-left: 14px;
+    border: 2px solid @text-color;
+  }
+
+  &:focus:invalid {
+    border: 2px solid @text-color;
+  }
 }
 
-.cat-form__input:hover {
-  border: 1px solid @input-border-color;
+.cat-form__item--email,
+.cat-form__item--tel {
+  position: relative;
 }
 
-.cat-form__input:active,
-.cat-form__input:focus {
-  border: 2px solid @text-color;
+.cat-form__logo-email {
+  position: absolute;
+  right: 20px;
+
+  width: 18px;
+  height: 14px;
 }
 
-.cat-form__input:invalid {
-  border: 2px solid @border-invalid-color;
+.cat-form__input--email:focus + .cat-form__logo-email {
+  fill: @button-color;
 }
 
-.cat-form__input--email {
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-size: 18px 14px;
-  background-position: 97% 50%;
+.cat-form__logo-tel {
+  position: absolute;
+  right: 17px;
+
+  width: 21px;
+  height: 21px;
 }
 
-.cat-form__input--tel {
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-size: 21px 21px;
-  background-position: 97% 50%;
+.cat-form__input--tel:focus + .cat-form__logo-tel {
+  fill: @button-color;
 }
 
 .cat-form__legend {
@@ -139,19 +162,20 @@
   padding: 15px;
   margin: 0;
 
+  line-height: @large-line-height;
+
   border: 1px solid @input-border-major-color;
   outline: none;
 
-  line-height: @large-line-height;
-}
+  &:hover {
+    border: 1px solid @input-border-color;
+  }
 
-.cat-form__textarea:hover {
-  border: 1px solid @input-border-color;
-}
-
-.cat-form__textarea:active,
-.cat-form__textarea:focus {
-  border: 2px solid @text-color;
+  &:active,
+  &:focus {
+    padding: 14px;
+    border: 2px solid @text-color;
+  }
 }
 
 .cat-form__item:last-child > .checkbox-label {
@@ -213,6 +237,12 @@
 
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
+
+    &:active,
+    &:focus {
+      padding: 14px 19px;
+      border: 2px solid @text-color;
+    }
   }
 
   .cat-form__label {
@@ -225,6 +255,16 @@
 
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
+
+    &:hover {
+      border: 1px solid @input-border-color;
+    }
+
+    &:active,
+    &:focus {
+      padding: 14px 19px;
+      border: 2px solid @text-color;
+    }
   }
 
   .cat-form__legend {
@@ -280,6 +320,10 @@
 
   .cat-form__input--email {
     margin-right: 80px;
+  }
+
+  .cat-form__logo-email {
+    right: 100px;
   }
 
   .cat-form__item:last-child {

@@ -1,6 +1,6 @@
 /*         Мобильная разметка         */
 
-.page-header {
+.page-header__container {
   padding-top: 15px;
 }
 
@@ -40,14 +40,26 @@
   border: none;
   outline: none;
   background-color: #ffffff;
-  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
   &:hover,
   &:focus {
     opacity: 0.7;
   }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.main-nav--closed .page-header__toggle {
+  background-image: url("../img/icon-mobile-menu.svg");
+}
+
+.main-nav--opened .page-header__toggle {
+  background-image: url("../img/icon-close.svg");
 }
 
 .page-header__list {
@@ -112,10 +124,24 @@
   border-bottom: 1px solid @button-color;
 }
 
+@media (max-width: 767px) {
+  .main-nav--closed .page-header__list {
+    display: none;
+  }
+
+  .main-nav--nojs .page-header__list {
+    display: block;
+  }
+
+  .main-nav--nojs .page-header__toggle {
+    background-image: none;
+  }
+}
+
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-  .page-header {
+  .page-header__container {
     position: relative;
 
     display: flex;
@@ -176,7 +202,7 @@
 /*         Разметка под desktop        */
 
 @media (min-width: @desktop-width) {
-  .page-header {
+  .page-header__container {
     padding-top: 35px;
   }
 
@@ -211,8 +237,17 @@
   }
 
   .page-header--background {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    height: 696px;
+    width: 50%;
+
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-position: 100% 0;
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
