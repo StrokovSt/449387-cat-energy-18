@@ -1,6 +1,6 @@
 /*         Мобильная разметка         */
 
-.page-header {
+.page-header__container {
   padding-top: 15px;
 }
 
@@ -12,8 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 191px;
-  height: 39px;
+  max-width: 203px;
   margin-bottom: 15px;
 
   &:hover,
@@ -41,14 +40,26 @@
   border: none;
   outline: none;
   background-color: #ffffff;
-  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
   &:hover,
   &:focus {
     opacity: 0.7;
   }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.main-nav--closed .page-header__toggle {
+  background-image: url("../img/icon-mobile-menu.svg");
+}
+
+.main-nav--opened .page-header__toggle {
+  background-image: url("../img/icon-close.svg");
 }
 
 .page-header__list {
@@ -113,21 +124,44 @@
   border-bottom: 1px solid @button-color;
 }
 
+@media (max-width: 767px) {
+  .main-nav--closed .page-header__list {
+    display: none;
+  }
+
+  .main-nav--nojs .page-header__list {
+    display: block;
+  }
+
+  .main-nav--nojs .page-header__toggle {
+    background-image: none;
+  }
+}
+
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-  .page-header {
+  .page-header__container {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding-top: 25px;
+  }
+
+  .page-header__main-nav {
+    margin-left: auto;
   }
 
   .page-header__logo {
-    width: 174px;
-    height: 59px;
     margin: 0;
-    margin-right: 95px;
     padding: 0;
+  }
+
+  .page-header__logo img {
+    width: 174px;
   }
 
   .page-header__toggle {
@@ -168,6 +202,15 @@
 /*         Разметка под desktop        */
 
 @media (min-width: @desktop-width) {
+  .page-header__container {
+    padding-top: 35px;
+  }
+
+  .page-header__picture img {
+    width: 206px;
+    height: 60px;
+  }
+
   .page-header__link--colored {
     margin: 0;
     padding: 5px 0;
@@ -194,24 +237,17 @@
   }
 
   .page-header--background {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
 
-    &::after {
-      content: "";
+    display: block;
+    height: 696px;
+    width: 50%;
 
-      position: absolute;
-      left: 50%;
-      top: 0;
-
-      display: block;
-      width: 720px;
-      height: 700px;
-
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-position: 100% 0;
-      background-repeat: no-repeat;
-
-      z-index: -1;
-    }
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

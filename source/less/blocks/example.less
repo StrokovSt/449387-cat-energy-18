@@ -1,27 +1,30 @@
 /*         Мобильная разметка         */
 
 .example {
-  padding: 0 20px;
-
   background-color: @background-color;
 }
 
 .example__heading {
-  margin-bottom: 25px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 30px;
 
-  font-size: 36px;
-  line-height: 1.67;
+  font-size: @extra-large-font-size;
+  line-height: @XXL-line-height;
   text-align: left;
   font-weight: normal;
   color: @heading-color;
 }
 
 .example__description {
+  padding: 0;
+  margin: 0;
   margin-bottom: 25px;
 
   font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 1.3;
+  font-size: @small-font-size;
+  line-height: @large-line-height;
   text-align: left;
 }
 
@@ -51,7 +54,8 @@
   padding: 18px 0;
   border: 1px solid @input-border-color;
 
-  font-size: 24px;
+  font-size: @large-font-size;
+  line-height: @huge-line-height;
   text-align: center;
   color: @heading-color;
 }
@@ -67,50 +71,62 @@
   padding: 0 20px;
 
   font-family: "Arial", sans-serif;
-  font-size: 12px;
+  font-size: @extra-small-font-size;
+  line-height: @extra-small-line-height;
   text-align: center;
 
   background-color: @background-color;
 }
 
-.example__expenses {
-  display: block;
+.example__expenses-container {
+  display: flex;
+  justify-content: space-between;
+  width: 185px;
+  height: 50px;
+  margin: 0 auto;
   margin-top: 35px;
+}
 
-  font-size: 14px;
-  line-height: 1.43;
+.example__expenses {
+  font-size: @small-font-size;
   text-align: center;
-  color: @heading-color;
+  line-height: @extra-large-line-height;
+  text-transform: uppercase;
 }
 
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
   .example {
+    border-top: 1px solid @border-color;
+    background-color: #ffffff;
+  }
+
+  .example__container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
-    padding-bottom: 40px;
+    padding-bottom: 90px;
 
-    background-color: @border-color;
+    background-color: #ffffff;
   }
 
   .example__heading {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
+    padding-top: 50px;
 
-    font-size: 60px;
-    line-height: 1;
+    font-size: @huge-font-size;
+    line-height: @XXL-line-height;
   }
 
   .example__description {
     width: 675px;
     margin-bottom: 55px;
 
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: @little-font-size;
+    line-height: @huge-line-height;
   }
 
   .example__list {
@@ -139,18 +155,96 @@
     width: inherit;
     padding: 8px;
 
-    font-size: 14px;
+    font-size: @small-font-size;
+    line-height: @small-line-height;
 
-    background-color: @border-color;
+    background-color: #ffffff;
+  }
+
+  .example__expenses-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 174px;
+    height: 50px;
+    margin-top: 0;
+    margin-left: auto;
   }
 
   .example__expenses {
-    width: 174px;
-    margin-top: 0;
-    margin-left: auto;
+    margin: 0;
 
-    font-size: 20px;
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
     text-align: right;
-    line-height: 1;
+  }
+}
+
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+  .example {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    margin: 0 auto;
+
+    border: none;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      left: -200%;
+      right: -200%;
+
+      display: block;
+      height: 462px;
+      background-image: linear-gradient(to right, @background-color 50%, @border-color 50%);
+
+      z-index: -1;
+    }
+  }
+
+  .example__container {
+    display: block;
+    position: relative;
+
+    width: 46%;
+    margin: 0;
+    padding: 0 110px;
+    padding-bottom: 75px;
+
+    background-image: linear-gradient(to bottom, #ffffff 25.5%, @background-color 25.5%);
+  }
+
+  .example__heading {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .example__description {
+    width: 435px;
+    margin-top: 175px;
+  }
+
+  .example__field {
+    background-color: @background-color;
+  }
+
+  .example__expenses-container {
+    width: 340px;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    margin: 0;
+    margin-top: 55px;
   }
 }

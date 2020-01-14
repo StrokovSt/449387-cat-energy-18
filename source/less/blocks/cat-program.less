@@ -2,6 +2,7 @@
 
 .cat-program {
   position: relative;
+  z-index: 1;
 
   display: flex;
   flex-wrap: wrap;
@@ -11,26 +12,28 @@
   background-position: 50% 0;
   background-repeat: no-repeat;
 
-  z-index: 1;
-}
+  &::after {
+    content: "";
 
-.cat-program::after {
-  content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    right: -20px;
 
-  position: absolute;
-  top: 0;
-  left: -20px;
-  right: -20px;
+    display: block;
+    height: 305px;
 
-  display: block;
-  height: 305px;
+    background: linear-gradient(to right, #65a93c, #63a73a);
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-position: 0% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 
-  background: linear-gradient(to right, #65a93c, #63a73a);
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-position: 0% 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+  }
 }
 
 .cat-program__heading {
@@ -64,15 +67,15 @@
 
 @media (min-width: @tablet-width) {
   .cat-program {
+    position: relative;
+
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
     min-height: 850px;
+    margin: 0 auto;
     padding: 0 90px;
-
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-position: 40% 100%;
   }
 
   .cat-program::after {
@@ -104,7 +107,13 @@
   }
 
   .cat-program__product-image {
-    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    width: 709px;
   }
 }
 
@@ -113,12 +122,10 @@
 @media (min-width: @desktop-width) {
   .cat-program {
     min-height: 600px;
+    margin: 0;
     margin-bottom: 60px;
     margin-top: 30px;
     padding: 0 80px;
-
-    background-image: url("../img/index-can-desktop@1x.png");
-    background-position: 68% 0;
   }
 
   .cat-program__heading {
@@ -127,5 +134,12 @@
 
   .cat-program__slogan {
     margin-bottom: 50px;
+  }
+
+  .cat-program__product-image {
+    left: 41%;
+    bottom: 17%;
+
+    width: 552px;
   }
 }

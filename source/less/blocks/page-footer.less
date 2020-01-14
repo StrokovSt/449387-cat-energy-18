@@ -1,11 +1,12 @@
 /*         Мобильная разметка         */
 
 .page-footer {
-  text-align: center;
-
   background-color: @background-color;
 }
 
+.page-footer__container {
+  text-align: center;
+}
 
 .page-footer__logo {
   display: flex;
@@ -64,13 +65,13 @@
 }
 
 .page-footer__logo-svg:active {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-  .page-footer {
+  .page-footer__container {
     display: flex;
     justify-content: space-between;
     padding-top: 63px;
