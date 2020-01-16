@@ -152,11 +152,6 @@
   }
 
   .products__item {
-    position: relative;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
     justify-content: center;
     width: 325px;
     padding: 0;
@@ -164,6 +159,8 @@
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 40px;
+
+    text-align: center;
 
     background-color: @background-color;
 
@@ -180,12 +177,13 @@
 
   .products__product-image {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: -40px;
 
     display: block;
     width: auto;
     height: 172px;
+    transform: translateX(-50%);
   }
 
   .products__product-image--big {

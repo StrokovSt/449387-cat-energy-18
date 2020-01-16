@@ -5,7 +5,9 @@
     <title>HTML Academy: Кэт энерджи - index</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="/css/style.css" >
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" type="font/woff2">
   </head>
   <body>
 
@@ -19,6 +21,12 @@
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип: Cat Energy">
         </picture>
       </a>
+
+<!--
+      <svg class="site-list__icon-comb" width="27" height="34">
+        <use xlink:href="img/sprites/sprite.svg#icon--htmlacademy"></use>
+      </svg>
+-->
 
       <nav class="page-header__main-nav main-nav--nojs">
         <button class="page-header__toggle" type="button">
@@ -41,6 +49,10 @@
           <h2 class="cat-program__heading">Функциональное<br>питание для котов</h2>
           <b class="cat-program__slogan">Занялся собой? Займись котом!</b>
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/index-can-desktop@1x.webp 1x, img/WebP/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"srcset="img/WebP/index-can-tablet@1x.webp 1x, img/WebP/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/WebP/index-can-mobile@1x.webp 1x, img/WebP/index-can-mobile@2x.webp 2x">
+
             <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
             <img class="cat-program__product-image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Изображение товара: Cat Energy Pro со вкусом курицы">
@@ -82,6 +94,8 @@
             <li class="work-principle__item work-principle__item--leaf">
               <div class="work-principle__icon-container">
                 <picture>
+                  <source type="image/webp" srcset="img/WebP/advantage-leaf@1x.webp 1x, img/WebP/advantage-leaf@2x.webp 2x">
+
                   <img class="work-principle__icon-image" src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x" alt="Иконка здорового питания">
                 </picture>
               </div>
@@ -92,6 +106,8 @@
             <li class="work-principle__item work-principle__item--powder">
               <div class="work-principle__icon-container">
                 <picture>
+                  <source type="image/webp" srcset="img/WebP/advantage-powder@1x.webp 1x, img/WebP/advantage-powder@2x.webp 2x">
+
                   <img class="work-principle__icon-image" src="img/advantage-powder@1x.png" srcset="img/advantage-powder@2x.png 2x" alt="Иконка порошка">
                 </picture>
               </div>
@@ -102,6 +118,8 @@
             <li class="work-principle__item work-principle__item--dining">
               <div class="work-principle__icon-container">
                 <picture>
+                  <source type="image/webp" srcset="img/WebP/advantage-dining@1x.webp 1x, img/WebP/advantage-dining@2x.webp 2x">
+
                   <img class="work-principle__icon-image" src="img/advantage-dining@1x.png" srcset="img/advantage-dining@2x.png 2x" alt="Иконка еды">
                 </picture>
               </div>
@@ -112,6 +130,8 @@
             <li class="work-principle__item work-principle__item--clock">
               <div class="work-principle__icon-container">
                 <picture>
+                  <source type="image/webp" srcset="img/WebP/advantage-clock@1x.webp 1x, img/WebP/advantage-clock@2x.webp 2x">
+
                   <img class="work-principle__icon-image" src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x" alt="Иконка времени">
                 </picture>
               </div>
@@ -135,11 +155,11 @@
           <ul class="example__list">
             <li class="example__item">
               <p class="example__value">5 кг</p>
-              <p class="example__field">снижение веса</p>
+              <p class="example__field example__field--weight">снижение веса</p>
             </li>
             <li class="example__item">
               <p class="example__value">60 дней</p>
-              <p class="example__field">затрачено времени</p>
+              <p class="example__field example__field--time">затрачено времени</p>
             </li>
           </ul>
           <div class="example__expenses-container">
@@ -153,6 +173,10 @@
           <div class="switch__cats-container">
             <div class="switch__img-block switch__img-block--fat-cat">
               <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/before-desktop@1x.webp 1x, img/WebP/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"srcset="img/WebP/before-tablet@1x.webp 1x, img/WebP/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/WebP/before-mobile@1x.webp 1x, img/WebP/before-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                 <img class="switch__fat-cat" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="232" alt="Изображение худого котейки">
@@ -160,6 +184,10 @@
             </div>
             <div class="switch__img-block switch__img-block--slim-cat">
               <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/after-desktop@1x.webp 1x, img/WebP/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"srcset="img/WebP/after-tablet@1x.webp 1x, img/WebP/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/WebP/after-mobile@1x.webp 1x, img/WebP/after-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
                 <img class="switch__slim-cat" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="232" alt="Изображение толстого котейки">
@@ -187,6 +215,10 @@
         </div>
         <a class="map__link">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/bg-map-desktop@1x.webp 1x, img/WebP/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"srcset="img/WebP/bg-map-tablet@1x.webp 1x, img/WebP/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/WebP/bg-map-mobile@1x.webp 1x, img/WebP/bg-map-mobile@2x.webp 2x">
+
             <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
             <img class="map__map-image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400"
@@ -207,7 +239,7 @@
           <a class="social__link social__link--vkontakte"
                 href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы в Вконтакте</span>
-            <svg class="page-footer__logo-svg icon-vk" width="30" height="16" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg class="page-footer__logo-svg page-footer__logo--vk" width="30" height="16" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
 <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
 c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4h-1.4c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
@@ -229,7 +261,7 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"/>
           <a class="social__link social__link--instagram"
                 href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Мы в Инстаграме</span>
-            <svg class="page-footer__logo-svg icon-insta" width="23" height="23" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg class="page-footer__logo-svg page-footer__logo--insta" width="23" height="23" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
 <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
 M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
@@ -243,7 +275,7 @@ s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9z"/>
           <a class="social__link social__link--facebook"
                 href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Мы в Фейсбуке</span>
-            <svg class="page-footer__logo-svg icon-fb" width="14" height="28" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg class="page-footer__logo-svg page-footer__logo--fb" width="14" height="28" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
 <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18
 h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6H1.1v2.3h2V18
@@ -256,9 +288,8 @@ z"/>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">HTML Academy</p>
         <a class="page-footer__logo-link" href="https://htmlacademy.ru/">
-          <svg class="page-footer__logo-svg icon-htmlacademy" width="41" height="46" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+          <svg class="page-footer__logo-svg page-footer__logo--htmlacademy" width="41" height="46" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
           </svg>
-
         </a>
       </div>
       </div>
