@@ -4,6 +4,10 @@
   background-color: @background-color;
 }
 
+.icon-pocket {
+  fill: red;
+}
+
 .example__heading {
   padding: 0;
   margin: 0;
@@ -40,11 +44,6 @@
 
 .example__item {
   position: relative;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .example__value {
@@ -63,12 +62,11 @@
 .example__field {
   position: absolute;
   bottom: -15px;
+  left: 50%;
 
-  display: flex;
-  justify-content: center;
-  width: 70px;
+  display: inline-block;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 10px;
 
   font-family: "Arial", sans-serif;
   font-size: @extra-small-font-size;
@@ -76,12 +74,14 @@
   text-align: center;
 
   background-color: @background-color;
+  transform: translateX(-50%);
 }
 
 .example__expenses-container {
   display: flex;
   justify-content: space-between;
-  width: 185px;
+  flex-wrap: wrap;
+  width: 190px;
   height: 50px;
   margin: 0 auto;
   margin-top: 35px;
@@ -148,12 +148,7 @@
   }
 
   .example__field {
-    position: absolute;
-    bottom: -13px;
-
-    display: inline-block;
-    width: inherit;
-    padding: 8px;
+    bottom: -5px;
 
     font-size: @small-font-size;
     line-height: @small-line-height;
@@ -161,11 +156,18 @@
     background-color: #ffffff;
   }
 
+  .example__field--weight {
+    width: 75%;
+  }
+
+  .example__field--time {
+    width: 90%;
+  }
+
   .example__expenses-container {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 174px;
+    width: 176px;
     height: 50px;
     margin-top: 0;
     margin-left: auto;

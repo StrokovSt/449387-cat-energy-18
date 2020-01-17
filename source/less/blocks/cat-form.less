@@ -61,12 +61,13 @@
 
   position: absolute;
   left: 11px;
-  top: 5px;
+  top: 50%;
 
   width: 8px;
   height: 8px;
   border-radius: 50%;
 
+  transform: translateY(-50%);
   background-color: @button-color;
 }
 
@@ -85,6 +86,7 @@
   padding-left: 15px;
 
   line-height: @large-line-height;
+  vertical-align: middle;
 
   border: 1px solid @input-border-major-color;
   background-color: #ffffff;
@@ -100,9 +102,11 @@
     padding-left: 14px;
     border: 2px solid @text-color;
   }
+}
 
-  &:focus:invalid {
-    border: 2px solid @text-color;
+.cat-form__input--error {
+  &:invalid {
+    border: 2px solid #ff8282;
   }
 }
 
@@ -113,26 +117,40 @@
 
 .cat-form__logo-email {
   position: absolute;
+  top: 50%;
   right: 20px;
 
   width: 18px;
   height: 14px;
+  transform: translateY(-50%);
 }
 
 .cat-form__input--email:focus + .cat-form__logo-email {
   fill: @button-color;
 }
 
+.cat-form__input--error + .cat-form__logo-email,
+.cat-form__input--error:focus + .cat-form__logo-email {
+  fill: #ff8282;
+}
+
 .cat-form__logo-tel {
   position: absolute;
+  top: 50%;
   right: 17px;
 
   width: 21px;
   height: 21px;
+  transform: translateY(-50%);
 }
 
 .cat-form__input--tel:focus + .cat-form__logo-tel {
   fill: @button-color;
+}
+
+.cat-form__input--error + .cat-form__logo-tel,
+.cat-form__input--error:focus + .cat-form__logo-tel {
+  fill: #ff8282;
 }
 
 .cat-form__legend {
@@ -158,9 +176,9 @@
 .cat-form__textarea {
   width: 100%;
   height: 150px;
-  resize: none;
-  padding: 15px;
   margin: 0;
+  padding: 15px;
+  resize: none;
 
   line-height: @large-line-height;
 
@@ -176,6 +194,10 @@
     padding: 14px;
     border: 2px solid @text-color;
   }
+}
+
+.cat-form__textarea:focus::placeholder {
+  opacity: 0;
 }
 
 .cat-form__item:last-child > .checkbox-label {
@@ -241,7 +263,6 @@
     &:active,
     &:focus {
       padding: 14px 19px;
-      border: 2px solid @text-color;
     }
   }
 
@@ -256,14 +277,9 @@
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
 
-    &:hover {
-      border: 1px solid @input-border-color;
-    }
-
     &:active,
     &:focus {
       padding: 14px 19px;
-      border: 2px solid @text-color;
     }
   }
 
@@ -362,17 +378,8 @@
   }
 
   .cat-form__radio:checked + .radio-label::after {
-    content: "";
-
-    position: absolute;
-    left: 11px;
-    top: 2px;
-
     width: 18px;
     height: 18px;
-    border-radius: 50%;
-
-    background-color: @button-color;
   }
 
   .cat-form__list--flex {
