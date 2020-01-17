@@ -84,8 +84,6 @@
 
 @media (min-width: @tablet-width) {
   .additional-products {
-    position: relative;
-
     &::after {
       content: "";
 
@@ -132,7 +130,6 @@
   }
 
   .additional-item__heading {
-    margin: 0;
     margin-bottom: 20px;
     padding: 0;
 
@@ -140,18 +137,13 @@
 
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
-    color: #222222;
   }
 
   .additional-item__table {
     width: 30%;
   }
 
-  .additional-item__field {
-    font-size: @little-font-size;
-    line-height: @extra-large-line-height;
-  }
-
+  .additional-item__field,
   .additional-item__value {
     font-size: @little-font-size;
     line-height: @extra-large-line-height;
