@@ -5,11 +5,16 @@
     <title>HTML Academy: Кэт энерджи - index</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.min.css">
     <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" type="font/woff2">
     <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" type="font/woff2">
   </head>
   <body>
+
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header">
       <div class="page-header--background"></div>
       <div class="page-header__container container">
@@ -43,7 +48,7 @@
           <b class="cat-program__slogan">Занялся собой? Займись котом!</b>
           <picture>
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/index-can-desktop@1x.webp 1x, img/WebP/index-can-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"srcset="img/WebP/index-can-tablet@1x.webp 1x, img/WebP/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/WebP/index-can-tablet@1x.webp 1x, img/WebP/index-can-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/WebP/index-can-mobile@1x.webp 1x, img/WebP/index-can-mobile@2x.webp 2x">
 
             <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
@@ -167,7 +172,7 @@
             <div class="switch__img-block switch__img-block--fat-cat">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/before-desktop@1x.webp 1x, img/WebP/before-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)"srcset="img/WebP/before-tablet@1x.webp 1x, img/WebP/before-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/WebP/before-tablet@1x.webp 1x, img/WebP/before-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/WebP/before-mobile@1x.webp 1x, img/WebP/before-mobile@2x.webp 2x">
 
                 <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
@@ -178,7 +183,7 @@
             <div class="switch__img-block switch__img-block--slim-cat">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/after-desktop@1x.webp 1x, img/WebP/after-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)"srcset="img/WebP/after-tablet@1x.webp 1x, img/WebP/after-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/WebP/after-tablet@1x.webp 1x, img/WebP/after-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/WebP/after-mobile@1x.webp 1x, img/WebP/after-mobile@2x.webp 2x">
 
                 <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
@@ -209,13 +214,12 @@
         <a class="map__link">
           <picture>
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/bg-map-desktop@1x.webp 1x, img/WebP/bg-map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"srcset="img/WebP/bg-map-tablet@1x.webp 1x, img/WebP/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/WebP/bg-map-tablet@1x.webp 1x, img/WebP/bg-map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/WebP/bg-map-mobile@1x.webp 1x, img/WebP/bg-map-mobile@2x.webp 2x">
 
             <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-            <img class="map__map-image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400"
-                alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            <img class="map__map-image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
           </picture>
         </a>
       </section>
@@ -232,25 +236,23 @@
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы в Вконтакте</span>
             <svg class="page-footer__logo-svg page-footer__logo--vk" width="30" height="16">
-              <use xlink:href="img/sprites/sprite.svg#icon-vk"></use>
+              <use xlink:href="img/sprite.svg#icon-vk"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--instagram"
-                href="https://www.instagram.com/htmlacademy">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Мы в Инстаграме</span>
             <svg class="page-footer__logo-svg page-footer__logo--insta" width="23" height="23">
-              <use xlink:href="img/sprites/sprite.svg#icon-insta"></use>
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook"
-                href="https://www.facebook.com/htmlacademy">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Мы в Фейсбуке</span>
             <svg class="page-footer__logo-svg page-footer__logo--fb" width="14" height="28">
-              <use xlink:href="img/sprites/sprite.svg#icon-fb"></use>
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
           </a>
         </li>
@@ -260,7 +262,7 @@
         <p class="copyright__text">HTML Academy</p>
         <a class="page-footer__logo-link" href="https://htmlacademy.ru/">
           <svg class="page-footer__logo-svg page-footer__logo--htmlacademy" width="41" height="46">
-            <use xlink:href="img/sprites/sprite.svg#icon-htmlacademy"></use>
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>

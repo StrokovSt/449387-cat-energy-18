@@ -4,11 +4,16 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи - form</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="/css/style.css">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/css/style.min.css">
     <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body>
+
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="page-header">
       <div class="page-header__container container">
@@ -28,10 +33,10 @@
               <a class="page-header__link" href="index.html">Главная</a>
             </li>
             <li class="page-header__item">
-              <a class="page-header__link"  href="catalog.html">Каталог продукции</a>
+              <a class="page-header__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="page-header__item">
-              <a class="page-header__link page-header__link--active" >Подбор программы</a>
+              <a class="page-header__link page-header__link--active">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -52,18 +57,15 @@
                 <ul class="cat-form__list">
                   <li class="cat-form__item">
                     <label class="cat-form__label" for="cat-name">Имя:*</label>
-                    <input class="cat-form__input cat-form__input--error" type="text" id="cat-name" name="cat-name"
-                        placeholder="Барсик" required>
+                    <input class="cat-form__input cat-form__input--error" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required="">
                   </li>
                   <li class="cat-form__item">
                     <label class="cat-form__label" for="cat-weight">Вес (кг):*</label>
-                    <input class="cat-form__input" type="text" id="cat-weight" name="cat-weight"
-                        placeholder="7" required>
+                    <input class="cat-form__input" type="text" id="cat-weight" name="cat-weight" placeholder="7" required="">
                   </li>
                   <li class="cat-form__item">
                     <label class="cat-form__label" for="cat-age">Возраст (лет):</label>
-                    <input class="cat-form__input" type="text" id="cat-age" name="cat-age"
-                        placeholder="7">
+                    <input class="cat-form__input" type="text" id="cat-age" name="cat-age" placeholder="7">
                   </li>
                 </ul>
               </fieldset>
@@ -71,12 +73,11 @@
               <fieldset class="cat-form__program cat-fieldset">
                 <ul class="cat-form__list cat-form__list--bordered">
                   <li class="cat-form__item">
-                    <input class="cat-form__radio visually-hidden" id="cat-lose-weight" type="radio" name="cat-program" value="lose" checked>
+                    <input class="cat-form__radio visually-hidden" id="cat-lose-weight" type="radio" name="cat-program" value="lose" checked="">
                     <label class="cat-form__label radio-label" for="cat-lose-weight">Похудение</label>
                   </li>
                   <li class="cat-form__item">
-                    <input class="cat-form__radio visually-hidden" id="cat-gain-weight" type="radio" name="cat-program"
-                        value="set">
+                    <input class="cat-form__radio visually-hidden" id="cat-gain-weight" type="radio" name="cat-program" value="set">
                     <label class="cat-form__label radio-label" for="cat-gain-weight">Набор массы</label>
                   </li>
                   <li class="cat-form__item">
@@ -91,16 +92,16 @@
               <ul class="cat-form__list cat-form__list--flex">
                 <li class="cat-form__item cat-form__item--email">
                   <label class="cat-form__label cat-form__label--email" for="cat-email">E-mail:*</label>
-                  <input class="cat-form__input cat-form__input--error cat-form__input--email" type="email" id="cat-email" name="cat-email" placeholder="kuklachev@gmail.com" required>
+                  <input class="cat-form__input cat-form__input--error cat-form__input--email" type="email" id="cat-email" name="cat-email" placeholder="kuklachev@gmail.com" required="">
                   <svg class="cat-form__logo-email" width="30" height="16">
-                    <use xlink:href="img/sprites/sprite.svg#icon-mail"></use>
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
                   </svg>
                 </li>
                 <li class="cat-form__item cat-form__item--tel">
                   <label class="cat-form__label" for="cat-tel">Телефон:*</label>
-                  <input class="cat-form__input cat-form__input--tel" type="tel" name="cat-tel" id="cat-tel" placeholder="8 (960) 900-60-90" required>
+                  <input class="cat-form__input cat-form__input--tel" type="tel" name="cat-tel" id="cat-tel" placeholder="8 (960) 900-60-90" required="">
                   <svg class="cat-form__logo-tel" width="21" height="21">
-                    <use xlink:href="img/sprites/sprite.svg#icon-phone"></use>
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
                   </svg>
                 </li>
               </ul>
@@ -153,13 +154,12 @@
         <a class="map__link">
           <picture>
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/bg-map-desktop@1x.webp 1x, img/WebP/bg-map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"srcset="img/WebP/bg-map-tablet@1x.webp 1x, img/WebP/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/WebP/bg-map-tablet@1x.webp 1x, img/WebP/bg-map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/WebP/bg-map-mobile@1x.webp 1x, img/WebP/bg-map-mobile@2x.webp 2x">
 
             <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-            <img class="map__map-image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400"
-                alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            <img class="map__map-image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
           </picture>
         </a>
       </section>
@@ -176,25 +176,23 @@
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы в Вконтакте</span>
             <svg class="page-footer__logo-svg page-footer__logo--vk" width="30" height="16">
-              <use xlink:href="img/sprites/sprite.svg#icon-vk"></use>
+              <use xlink:href="img/sprite.svg#icon-vk"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--instagram"
-                href="https://www.instagram.com/htmlacademy">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Мы в Инстаграме</span>
             <svg class="page-footer__logo-svg page-footer__logo--insta" width="23" height="23">
-              <use xlink:href="img/sprites/sprite.svg#icon-insta"></use>
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook"
-                href="https://www.facebook.com/htmlacademy">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Мы в Фейсбуке</span>
             <svg class="page-footer__logo-svg page-footer__logo--fb" width="14" height="28">
-              <use xlink:href="img/sprites/sprite.svg#icon-fb"></use>
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
           </a>
         </li>
@@ -204,7 +202,7 @@
         <p class="copyright__text">HTML Academy</p>
         <a class="page-footer__logo-link" href="https://htmlacademy.ru/">
           <svg class="page-footer__logo-svg page-footer__logo--htmlacademy" width="41" height="46">
-            <use xlink:href="img/sprites/sprite.svg#icon-htmlacademy"></use>
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
