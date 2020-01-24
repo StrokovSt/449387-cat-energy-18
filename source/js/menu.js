@@ -1,7 +1,7 @@
 let navMain = document.querySelector('.page-header__main-nav');
 let navToggle = document.querySelector('.page-header__toggle');
 
-navMain.classList.remove('main-nav--nojs');
+navMain.classList.remove('page-header__main-nav--nojs');
 navMain.classList.add('main-nav--closed');
 
 navToggle.addEventListener('click', function() {

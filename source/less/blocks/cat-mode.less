@@ -19,6 +19,10 @@
   background-color: @background-color;
 }
 
+.cat-mode__item:last-child {
+  margin-bottom: 15px;
+}
+
 .cat-mode__heading {
   position: relative;
 
@@ -27,7 +31,7 @@
   height: 60px;
   margin: 0;
   padding: 0;
-  padding-left: 90px;
+  padding-left: 75px;
 
   font-size: @large-font-size;
   line-height: @extra-huge-line-height;
@@ -43,7 +47,7 @@
 
     position: absolute;
     top: 0;
-    left: 0;
+    left: -5px;
 
     display: flex;
     justify-content: flex-start;
@@ -79,7 +83,7 @@
   display: inline-block;
   margin: 0;
   padding: 24px 0;
-  padding-top: 0;
+  padding-top: 20px;
 
   font-family: "Arial", sans-serif;
   font-size: @small-font-size;
@@ -93,7 +97,7 @@
   position: relative;
 
   display: inline-block;
-  margin: 10px 0 21px 0;
+  margin: 18px 0;
   padding-right: 50px;
 
   text-decoration: none;
@@ -141,17 +145,20 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 70px 55px;
+    padding: 65px 55px;
     padding-bottom: 0;
     margin-bottom: 30px;
 
     background-color: @background-color;
   }
 
+  .cat-mode__item:last-child {
+    margin-bottom: 30px;
+  }
+
   .cat-mode__heading {
     width: 100%;
     padding: 0;
-    margin-bottom: 15px;
 
     font-size: @extra-large-font-size;
     line-height: @extra-huge-line-height;
@@ -202,6 +209,7 @@
   .cat-mode__description {
     width: 57%;
     margin: 0;
+    padding-top: 15px;
 
     font-size: @little-font-size;
     line-height: @huge-line-height;
@@ -216,7 +224,8 @@
 
     display: inline-block;
     width: 160px;
-    margin: 35px 0 60px 0;
+    margin: 30px 0;
+    margin-bottom: 60px;
 
     font-size: @medium-font-size;
   }
@@ -233,15 +242,20 @@
   .cat-mode__item {
     width: 570px;
     margin-bottom: 0;
-    padding: 40px 55px;
+    padding: 40px 52px 0 52px;
 
     background-color: @background-color;
+  }
+
+  .cat-mode__item:last-child {
+    margin-bottom: 0;
   }
 
   .cat-mode__heading {
     height: 106px;
     margin: 0;
-    padding-left: 160px;
+    padding-left: 162px;
+    padding-top: 8px;
 
     font-size: @extra-large-font-size;
     line-height: @extra-huge-line-height;
@@ -253,7 +267,7 @@
     content: "";
 
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
 
     display: flex;
@@ -264,14 +278,16 @@
     background-image: url("../img/cat-slim-desktop.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    transform: translateY(-50%);
   }
 
   .cat-mode__heading--pro::after {
     content: "";
 
     position: absolute;
-    top: 0;
-    left: -7px;
+    top: 50%;
+    left: -16px;
 
     display: flex;
     justify-content: flex-start;
@@ -281,6 +297,8 @@
     background-image: url("../img/cat-pro-desktop.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    transform: translateY(-45%);
   }
 
   .cat-mode__item--slim::after {
@@ -293,7 +311,7 @@
 
   .cat-mode__description {
     width: 470px;
-    margin-top: 40px;
+    margin-top: 45px;
     padding: 0;
 
     font-size: @little-font-size;

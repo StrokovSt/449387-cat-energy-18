@@ -1,9 +1,17 @@
 .social__item:not(:last-child) {
-  margin-right: 35px;
+  margin-right: 36px;
 }
 
 .social__link {
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+  .social__item:not(:last-child) {
+    margin-right: 28px;
+  }
 }

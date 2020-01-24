@@ -24,7 +24,7 @@
             <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип: Cat Energy">
           </picture>
         </a>
-        <nav class="page-header__main-nav main-nav--nojs">
+        <nav class="page-header__main-nav page-header__main-nav--nojs">
           <button class="page-header__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -70,7 +70,7 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="cat-form__program cat-fieldset">
+              <fieldset class="cat-form__program cat-fieldset cat-fieldset--program">
                 <ul class="cat-form__list cat-form__list--bordered">
                   <li class="cat-form__item">
                     <input class="cat-form__radio visually-hidden" id="cat-lose-weight" type="radio" name="cat-program" value="lose" checked="">
@@ -113,11 +113,11 @@
               <textarea class="cat-form__textarea" name="cat-comment" id="cat-comment" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
 
-            <fieldset class="cat-form__comment cat-fieldset cat-fieldset--addon">
+            <fieldset class="cat-form__addon cat-fieldset cat-fieldset--addon">
               <legend class="cat-form__legend">Дополнительно</legend>
               <ul class="cat-form__list">
                 <li class="cat-form__item">
-                  <input class="cat-form__checkbox visually-hidden" type="checkbox" name="cat-sweetener" id="cat-sweetener">
+                  <input class="cat-form__checkbox visually-hidden" type="checkbox" name="cat-sweetener" id="cat-sweetener" checked>
                   <label class="cat-form__label checkbox-label" for="cat-sweetener">Сахарозаменитель</label>
                 </li>
                 <li class="cat-form__item">
@@ -142,7 +142,7 @@
         </section>
       </div>
 
-      <section class="map">
+      <section class="map map--fieldset">
         <div class="map__text-container map__text-container--colored">
           <h2 class="visually-hidden">Наши координаты</h2>
           <span class="map__invite">приглашаем к сотрудничеству дилеров!</span>
@@ -175,7 +175,7 @@
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы в Вконтакте</span>
-            <svg class="page-footer__logo-svg page-footer__logo--vk" width="30" height="16">
+            <svg class="page-footer__logo-svg page-footer__logo-svg--vk" width="30" height="16">
               <use xlink:href="#icon-vk"></use>
             </svg>
           </a>
@@ -183,7 +183,7 @@
         <li class="social__item">
           <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Мы в Инстаграме</span>
-            <svg class="page-footer__logo-svg page-footer__logo--insta" width="23" height="23">
+            <svg class="page-footer__logo-svg page-footer__logo-svg--insta" width="23" height="23">
               <use xlink:href="#icon-insta"></use>
             </svg>
           </a>
@@ -191,7 +191,7 @@
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Мы в Фейсбуке</span>
-            <svg class="page-footer__logo-svg page-footer__logo--fb" width="14" height="28">
+            <svg class="page-footer__logo-svg page-footer__logo-svg--fb" width="14" height="28">
               <use xlink:href="#icon-fb"></use>
             </svg>
           </a>
@@ -201,7 +201,7 @@
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">HTML Academy</p>
         <a class="page-footer__logo-link" href="https://htmlacademy.ru/">
-          <svg class="page-footer__logo-svg page-footer__logo--htmlacademy" width="41" height="46">
+          <svg class="page-footer__logo-svg page-footer__logo-svg--htmlacademy" width="41" height="46">
             <use xlink:href="#icon-htmlacademy"></use>
           </svg>
         </a>

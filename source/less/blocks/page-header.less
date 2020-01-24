@@ -5,7 +5,7 @@
 }
 
 .page-header__container {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .page-header__main-nav {
@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   max-width: 203px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 
   &:hover,
   &:focus {
@@ -121,11 +121,11 @@
     display: none;
   }
 
-  .main-nav--nojs .page-header__list {
+  .page-header__main-nav--nojs .page-header__list {
     display: block;
   }
 
-  .main-nav--nojs .page-header__toggle {
+  .page-header__main-nav--nojs .page-header__toggle {
     background-image: none;
   }
 }
@@ -141,6 +141,17 @@
     align-items: center;
     flex-wrap: wrap;
     padding-top: 25px;
+    padding-bottom: 18px;
+  }
+
+  .page-header__link {
+    font-size: @middling-font-size;
+    line-height: @huge-line-height;
+    color: @heading-color;
+  }
+
+  .page-header__link--active {
+    border-bottom: 2px solid @button-color;
   }
 
   .page-header__main-nav {
@@ -169,7 +180,8 @@
   }
 
   .page-header__item {
-    margin-right: 35px;
+    padding: 0;
+    margin-right: 38px;
 
     &::after {
       display: none;
@@ -183,19 +195,13 @@
   .page-header__item:last-child {
     margin-right: 0;
   }
-
-  .page-header__link {
-    font-size: @medium-font-size;
-    line-height: @huge-line-height;
-    color: @heading-color;
-  }
 }
 
 /*         Разметка под desktop        */
 
 @media (min-width: @desktop-width) {
   .page-header__container {
-    padding-top: 35px;
+    padding-top: 55px;
   }
 
   .page-header__picture img {
@@ -203,12 +209,18 @@
     height: 60px;
   }
 
+  .page-header__link {
+    font-size: @medium-font-size;
+    line-height: @huge-line-height;
+    text-transform: uppercase;
+  }
+
   .page-header__link--colored {
     margin: 0;
-    padding: 5px 0;
+    padding: 10px 0;
 
     font-size: @medium-font-size;
-    line-height: @extra-large-line-height;
+    line-height: @huge-line-height;
     text-transform: uppercase;
     color: #ffffff;
 
@@ -228,7 +240,7 @@
     border-bottom: 1px solid #ffffff;
   }
 
-  .page-header--background {
+  .page-header__background {
     position: absolute;
     top: 0;
     right: 0;

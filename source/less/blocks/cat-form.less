@@ -9,7 +9,7 @@
     position: absolute;
     left: -20px;
     right: -20px;
-    bottom: 0;
+    bottom: -6px;
 
     height: 1px;
 
@@ -35,6 +35,7 @@
   margin-right: 15px;
 
   line-height: @large-line-height;
+  text-transform: uppercase;
   text-align: left;
 }
 
@@ -85,7 +86,7 @@
   padding-left: 15px;
 
   line-height: @large-line-height;
-  vertical-align: middle;
+  text-transform: uppercase;
 
   border: 1px solid @input-border-major-color;
   background-color: #ffffff;
@@ -117,7 +118,7 @@
 .cat-form__logo-email {
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 15px;
 
   width: 18px;
   height: 14px;
@@ -160,7 +161,7 @@
   padding: 0;
   padding-right: 25px;
 
-  font-size: @medium-font-size;
+  font-size: @large-font-size;
   line-height: @huge-line-height;
   text-align: left;
   color: @heading-color;
@@ -169,7 +170,8 @@
 }
 
 .cat-form__legend--long {
-  width: 180px;
+  width: 200px;
+  padding: 0;
 }
 
 .cat-form__textarea {
@@ -180,6 +182,7 @@
   resize: none;
 
   line-height: @large-line-height;
+  text-transform: uppercase;
 
   border: 1px solid @input-border-major-color;
   outline: none;
@@ -210,7 +213,7 @@
   background-position: center;
 }
 
-.cat-form__checkbox:disabled + .rcheckbox-label::after {
+.cat-form__checkbox:disabled + .checkbox-label::after {
   opacity: 0.4;
 }
 
@@ -219,14 +222,14 @@
 }
 
 .cat-form__button-container {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   padding: 0;
 
   text-align: center;
 }
 
 .cat-form__button {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   outline: none;
   border: none;
@@ -254,7 +257,8 @@
   }
 
   .cat-form__input {
-    padding: 15px 20px;
+    padding: 0 20px;
+    height: 52px;
 
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
@@ -265,12 +269,22 @@
     }
   }
 
+  .cat-form__radio:checked + .radio-label::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cat-form__item {
+    margin-bottom: 20px;
+  }
+
   .cat-form__label {
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
   }
 
   .cat-form__textarea {
+    height: 175px;
     padding: 15px 20px;
 
     font-size: @medium-font-size;
@@ -286,6 +300,7 @@
     width: auto;
     padding: 0 40px;
     margin-left: -40px;
+    margin-bottom: 70px;
     background-color: white;
 
     font-size: @extra-large-font-size;
@@ -293,9 +308,7 @@
   }
 
   .cat-form__list--bordered {
-    padding: 0 30px;
-    padding-top: 25px;
-    padding-bottom: 15px;
+    padding: 35px 30px 5px 30px;
     border: 1px solid @border-color;
   }
 
@@ -321,6 +334,8 @@
     width: 283px;
     margin: 0;
     margin-right: 60px;
+
+    font-size: @little-font-size;
   }
 }
 
@@ -334,11 +349,7 @@
   }
 
   .cat-form__input--email {
-    margin-right: 80px;
-  }
-
-  .cat-form__logo-email {
-    right: 100px;
+    margin-right: 0;
   }
 
   .cat-form__item:last-child {
@@ -347,6 +358,13 @@
 
   .cat-form__list {
     margin: 70px 0;
+  }
+
+  .cat-form__list--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 70px 0 55px 0;
   }
 
   .cat-form__comment {
@@ -368,23 +386,16 @@
     justify-content: space-between;
   }
 
+  .cat-form__contacts {
+    width: 100%;
+  }
+
   .cat-form__list--bordered {
     width: 570px;
     padding: 0 30px;
-    padding-top: 25px;
-    padding-bottom: 15px;
+    padding-top: 35px;
+    padding-bottom: 25px;
     border: 1px solid @border-color;
-  }
-
-  .cat-form__radio:checked + .radio-label::after {
-    width: 18px;
-    height: 18px;
-  }
-
-  .cat-form__list--flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
   }
 
   .cat-form__legend {
@@ -395,15 +406,17 @@
   }
 
   .cat-fieldset--addon .cat-form__item {
-    width: 25%;
+    width: 250px;
   }
 
   .cat-fieldset--addon .cat-form__list {
-    margin: 50px 0 30px 0;
+    width: 100%;
+    margin: 50px 0 55px 0;
   }
 
   .cat-form__button {
     width: 568px;
+    margin-right: 82px;
   }
 
   .cat-form__note {

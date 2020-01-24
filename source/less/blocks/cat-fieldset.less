@@ -26,6 +26,8 @@
 }
 
 .cat-fieldset--cat-name {
+  margin-bottom: 15px;
+
   &::after {
     width: 100%;
   }
@@ -38,15 +40,23 @@
 }
 
 .cat-fieldset--addon {
+  margin-bottom: 25px;
+
   &::after {
     width: 100%;
   }
+}
+
+.cat-fieldset--addon .cat-form__legend {
+  margin-bottom: 40px;
 }
 
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
   .cat-fieldset {
+    margin-bottom: 50px;
+
     &::after {
       top: 22px;
       right: -70px;
@@ -61,15 +71,35 @@
   }
 
   .cat-fieldset--cat-comment {
+    margin-bottom: 70px;
+
     &::after {
       width: auto;
     }
   }
 
   .cat-fieldset--addon {
+    margin-bottom: 20px;
+
     &::after {
       width: auto;
     }
+  }
+
+  .cat-fieldset--program {
+    margin-bottom: 75px;
+  }
+
+
+  .cat-fieldset--addon .cat-form__legend {
+    margin-bottom: 65px;
+  }
+
+  .cat-form__button {
+    height: 52px;
+
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
   }
 }
 
@@ -84,5 +114,13 @@
       right: -100%;
       left: -100%;
     }
+  }
+
+  .cat-fieldset--addon {
+    width: 100%;
+  }
+
+  .cat-fieldset--addon .cat-form__legend {
+    margin-bottom: 10px;
   }
 }
