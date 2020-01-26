@@ -9,9 +9,6 @@
   justify-content: center;
   padding: 0;
 
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-
   &::after {
     content: "";
 
@@ -38,7 +35,7 @@
 
 .cat-program__heading {
   display: inline-block;
-  margin: 30px 0 20px 0;
+  margin: 30px 0 22px 0;
   padding: 0;
 
   font-size: @extra-large-font-size;
@@ -60,7 +57,11 @@
 }
 
 .cat-program__link {
+  padding: 12px 0;
   margin-bottom: 20px;
+
+  font-size: @small-font-size;
+  line-height: @large-line-height;
 }
 
 /*         Разметка под планшет         */
@@ -86,7 +87,7 @@
     display: block;
     width: 100%;
     margin: 0;
-    margin-top: 60px;
+    margin-top: 40px;
     padding: 0;
 
     font-size: @huge-font-size;
@@ -98,7 +99,7 @@
   .cat-program__slogan {
     display: block;
     width: 100%;
-    margin-top: 35px;
+    margin-top: 40px;
     margin-bottom: 48px;
 
     font-size: @medium-font-size;
@@ -109,12 +110,20 @@
 
   .cat-program__product-image {
     position: absolute;
-    bottom: -15px;
+    bottom: 0;
     right: 0;
     z-index: -1;
 
     display: block;
     width: 709px;
+  }
+
+  .cat-program__link {
+    padding: 16px 0;
+    margin-bottom: 20px;
+
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
   }
 }
 
@@ -124,22 +133,22 @@
   .cat-program {
     min-height: 600px;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 43px;
     margin-top: 0;
     padding: 0 80px;
   }
 
   .cat-program__heading {
-    margin-top: 110px;
+    margin-top: 90px;
   }
 
   .cat-program__slogan {
-    margin: 40px 0 50px 0;
+    margin: 40px 0 52px 0;
   }
 
   .cat-program__product-image {
-    left: 41%;
-    bottom: 12%;
+    left: 37%;
+    bottom: 15%;
 
     width: 552px;
   }

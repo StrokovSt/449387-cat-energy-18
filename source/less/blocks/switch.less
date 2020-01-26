@@ -37,6 +37,7 @@
 
 .switch_scale {
   position: relative;
+  z-index: 1;
 
   display: block;
   width: 45%;
@@ -66,6 +67,17 @@
   font-size: @little-font-size;
   line-height: @extra-large-line-height;
   text-transform: uppercase;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid black;
+  }
+
+  &:active {
+    border: none;
+  }
 }
 
 /*         Разметка под планшет         */
@@ -111,6 +123,7 @@
   .switch__img-block img {
     position: relative;
     min-width: 678px;
+    margin: 0;
 
     z-index: 1;
   }
@@ -136,18 +149,16 @@
 
   .switch__range {
     position: absolute;
-    bottom: 11%;
+    bottom: 12%;
     left: 13%;
 
     width: 75%;
   }
 
   .switch_scale {
-    position: relative;
-    z-index: 1;
-
     width: 100%;
     height: 6px;
+    margin: 0 28px;
 
     background-color: #dcdcdc;
     border-radius: 2.5px;
@@ -159,8 +170,6 @@
 
   .switch__span {
     z-index: 1;
-
-    padding-bottom: 6px;
 
     border-bottom: 1px dotted black;
 
@@ -215,7 +224,7 @@
 
 @media (min-width: @desktop-width) {
   .switch {
-    width: 54%;
+    width: 56%;
     padding-right: 0;
 
     &::after {
@@ -229,7 +238,8 @@
 
   .switch__cats-container {
     position: absolute;
-    bottom: 5%;
+    bottom: 9%;
+    left: 0;
   }
 
   .switch__img-block img {
@@ -259,6 +269,10 @@
     z-index: 2;
   }
 
+  .switch__range {
+    bottom: 11%;
+  }
+
   .switch_scale {
     width: 468px;
     height: 6px;
@@ -284,10 +298,10 @@
   }
 
   .switch__span--before {
-    margin-right: 20px;
+    padding: 6px 0;
   }
 
   .switch__span--after {
-    margin-left: 20px;
+    padding: 6px 0;
   }
 }

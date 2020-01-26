@@ -54,7 +54,7 @@
 }
 
 .page-footer__logo-svg {
-  margin: 22px 0;
+  margin: 20px 0;
 
   fill: #666666;
   transition: 0.2s;
@@ -67,6 +67,29 @@
 
 .page-footer__logo-svg:active {
   opacity: 0.5;
+}
+
+.page-footer__logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  text-decoration: none;
+  color: @text-color;
+
+  &:hover > .page-footer__logo-svg,
+  &:focus > .page-footer__logo-svg {
+    fill: @button-color;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:active > .page-footer__logo-svg {
+    opacity: 0.5;
+  }
 }
 
 .page-footer__logo-svg--vk {
@@ -90,6 +113,7 @@
   .page-footer__container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 25px;
     padding-bottom: 25px;
 
@@ -97,12 +121,12 @@
   }
 
   .page-footer__logo-image {
-    margin: 0;
+    margin: 25px 0;
     padding: 0;
   }
 
   .page-footer__social {
-    padding-left: 40px;
+    padding-left: 35px;
 
     border: none;
   }
