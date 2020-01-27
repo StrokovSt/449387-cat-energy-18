@@ -27,13 +27,15 @@
 
 .page-footer__logo-image {
   margin: 0;
-  padding: 35px 0;
+  padding: 37px 0;
+  padding-bottom: 32px;
 }
 
 .page-footer__social {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -42,31 +44,56 @@
   border-bottom: 1px solid @border-darker-color;
 }
 
-.page-footer__copyright {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
+.page-footer__social-item {
+  &:first-child {
+    margin-left: -11px;
+  }
 
-  list-style: none;
+  &:not(:last-child) {
+    margin-right: 38px;
+  }
+}
+
+.page-footer__social-link {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
 }
 
 .page-footer__logo-svg {
-  margin: 20px 0;
+  margin: 22px 0;
 
   fill: #666666;
   transition: 0.2s;
-}
 
-.page-footer__logo-svg:hover,
-.page-footer__logo-svg:focus {
-  fill: @button-color;
-}
+  &--vk {
+    width: 22px;
+    height: 12px;
+  }
 
-.page-footer__logo-svg:active {
-  opacity: 0.5;
+  &--insta {
+    width: 17px;
+    height: 17px;
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+  }
+
+  &--htmlacademy {
+    margin: 15px -7px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: @button-color;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .page-footer__logo-link {
@@ -92,19 +119,24 @@
   }
 }
 
-.page-footer__logo-svg--vk {
-  width: 22px;
-  height: 12px;
+.page-footer__copyright {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
-.page-footer__logo-svg--insta {
-  width: 17px;
-  height: 17px;
-}
+.page-footer__copyright-text {
+  display: flex;
+  align-items: center;
 
-.page-footer__logo-svg--fb {
-  width: 10px;
-  height: 19px;
+  font-family: "Arial", sans-serif;
+  font-size: @little-font-size;
+  text-align: center;
 }
 
 /*         Разметка под планшет         */
@@ -121,36 +153,48 @@
   }
 
   .page-footer__logo-image {
-    margin: 25px 0;
+    margin: 37px 0;
     padding: 0;
   }
 
   .page-footer__social {
+    justify-content: flex-start;
     padding-left: 35px;
+    max-width: 350px;
 
     border: none;
   }
 
-  .page-footer__logo-svg {
-    margin: 25px 0;
+  .page-footer__social-item:not(:last-child) {
+    margin-right: 30px;
   }
 
   .copyright__item:last-child {
     margin-left: 0;
   }
 
-  .page-footer__logo-svg--vk {
-    width: 30px;
-    height: 16px;
+  .page-footer__logo-svg {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--htmlacademy {
+      margin: 15px -7px;
+    }
   }
 
-  .page-footer__logo-svg--insta {
-    width: 23px;
-    height: 23px;
-  }
-
-  .page-footer__logo-svg--fb {
-    width: 14px;
-    height: 28px;
+  .page-footer__copyright-text {
+    margin-right: 25px;
   }
 }

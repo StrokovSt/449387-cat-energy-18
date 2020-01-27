@@ -57,7 +57,7 @@
                 <ul class="cat-form__list">
                   <li class="cat-form__item">
                     <label class="cat-form__label" for="cat-name">Имя:*</label>
-                    <input class="cat-form__input cat-form__input--error" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required="">
+                    <input class="cat-form__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required="">
                   </li>
                   <li class="cat-form__item">
                     <label class="cat-form__label" for="cat-weight">Вес (кг):*</label>
@@ -87,18 +87,18 @@
                 </ul>
               </fieldset>
 
-            <fieldset class="cat-form__contacts cat-fieldset cat-fieldset--cat-name">
+            <fieldset class="cat-form__contacts cat-fieldset cat-fieldset--cat-name stripe stripe--fieldset">
               <legend class="cat-form__legend cat-form__legend--long">Контактные данные (владельца кота)</legend>
               <ul class="cat-form__list cat-form__list--flex">
                 <li class="cat-form__item cat-form__item--email">
                   <label class="cat-form__label cat-form__label--email" for="cat-email">E-mail:*</label>
-                  <input class="cat-form__input cat-form__input--error cat-form__input--email" type="email" id="cat-email" name="cat-email" placeholder="kuklachev@gmail.com" required="">
+                  <input class="cat-form__input cat-form__input--email" type="email" id="cat-email" name="cat-email" placeholder="kuklachev@gmail.com" required="">
                   <svg class="cat-form__logo-email" width="30" height="16">
                     <use xlink:href="#icon-mail"></use>
                   </svg>
                 </li>
                 <li class="cat-form__item cat-form__item--tel">
-                  <label class="cat-form__label" for="cat-tel">Телефон:*</label>
+                  <label class="cat-form__label cat-form__label--tel" for="cat-tel">Телефон:*</label>
                   <input class="cat-form__input cat-form__input--tel" type="tel" name="cat-tel" id="cat-tel" placeholder="8 (960) 900-60-90" required="">
                   <svg class="cat-form__logo-tel" width="21" height="21">
                     <use xlink:href="#icon-phone"></use>
@@ -107,13 +107,13 @@
               </ul>
             </fieldset>
 
-            <fieldset class="cat-form__comment cat-fieldset cat-fieldset--cat-comment">
+            <fieldset class="cat-form__comment cat-fieldset cat-fieldset--cat-comment stripe stripe--fieldset">
               <legend class="cat-form__legend">Комментарий</legend>
               <label class="visually-hidden" for="cat-comment">Расскажите о повадках кота</label>
               <textarea class="cat-form__textarea" name="cat-comment" id="cat-comment" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
 
-            <fieldset class="cat-form__addon cat-fieldset cat-fieldset--addon">
+            <fieldset class="cat-form__addon cat-fieldset cat-fieldset--addon stripe stripe--fieldset">
               <legend class="cat-form__legend">Дополнительно</legend>
               <ul class="cat-form__list">
                 <li class="cat-form__item">
@@ -142,7 +142,7 @@
         </section>
       </div>
 
-      <section class="map map--fieldset">
+      <section class="map">
         <div class="map__text-container map__text-container--colored">
           <h2 class="visually-hidden">Наши координаты</h2>
           <span class="map__invite">приглашаем<br>к сотрудничеству дилеров!</span>
@@ -173,24 +173,24 @@
         </a>
 
         <ul class="page-footer__social social">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
               <svg class="page-footer__logo-svg page-footer__logo-svg--vk" width="30" height="16">
                 <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link page-footer__social-link--instagram" href="https://www.instagram.com/htmlacademy">
               <span class="visually-hidden">Мы в Инстаграме</span>
               <svg class="page-footer__logo-svg page-footer__logo-svg--insta" width="23" height="23">
                 <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link page-footer__social-link--facebook" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="page-footer__logo-svg page-footer__logo-svg--fb" width="14" height="28">
                 <use xlink:href="#icon-fb"></use>
@@ -199,9 +199,9 @@
           </li>
         </ul>
 
-        <div class="page-footer__copyright copyright">
+        <div class="page-footer__copyright">
           <a class="page-footer__logo-link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="copyright__text">HTML Academy</span>
+            <span class="page-footer__copyright-text">HTML Academy</span>
             <svg class="page-footer__logo-svg page-footer__logo-svg--htmlacademy" width="41" height="46">
               <use xlink:href="#icon-htmlacademy"></use>
             </svg>
@@ -212,7 +212,7 @@
 
     <script src="js/menu.js"></script>
     <script src="js/picturefill.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=1a9cddfe-ec69-4a28-b149-f437d3adf4c8&lang=ru_RU" type="text/javascript">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1a9cddfe-ec69-4a28-b149-f437d3adf4c8&lang=ru_RU">
     </script>
     <script src="js/yandex-map.js"></script>
 

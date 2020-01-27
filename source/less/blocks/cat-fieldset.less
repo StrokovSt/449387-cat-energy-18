@@ -9,41 +9,16 @@
 
   border: none;
 
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 13px;
-    right: -20px;
-    left: 20px;
-    height: 3px;
-
-    width: 0;
-
-    background-color: @button-color;
-    z-index: -1;
+  &--cat-name {
+    margin-bottom: 11px;
   }
-}
 
-.cat-fieldset--cat-name {
-  margin-bottom: 15px;
-
-  &::after {
-    width: 100%;
+  &--cat-comment {
+    margin-bottom: 29px;
   }
-}
 
-.cat-fieldset--cat-comment {
-  &::after {
-    width: 100%;
-  }
-}
-
-.cat-fieldset--addon {
-  margin-bottom: 25px;
-
-  &::after {
-    width: 100%;
+  &--addon {
+    margin-bottom: 25px;
   }
 }
 
@@ -55,41 +30,24 @@
 
 @media (min-width: @tablet-width) {
   .cat-fieldset {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
 
-    &::after {
-      top: 22px;
-      right: -70px;
-      left: -70px;
+    &--cat-comment {
+      margin-bottom: 63px;
+    }
+
+    &--addon {
+      margin-bottom: 17px;
+    }
+
+    &--program {
+      margin-bottom: 75px;
+    }
+
+    &--cat-name {
+      margin-bottom: 47px;
     }
   }
-
-  .cat-fieldset--cat-name {
-    &::after {
-      width: auto;
-    }
-  }
-
-  .cat-fieldset--cat-comment {
-    margin-bottom: 70px;
-
-    &::after {
-      width: auto;
-    }
-  }
-
-  .cat-fieldset--addon {
-    margin-bottom: 17px;
-
-    &::after {
-      width: auto;
-    }
-  }
-
-  .cat-fieldset--program {
-    margin-bottom: 75px;
-  }
-
 
   .cat-fieldset--addon .cat-form__legend {
     margin-bottom: 65px;
@@ -109,18 +67,12 @@
   .cat-fieldset {
     margin: 0;
 
-    &::after {
-      top: 22px;
-      right: -100%;
-      left: -100%;
+    &--addon {
+      width: 100%;
     }
   }
 
-  .cat-fieldset--addon {
-    width: 100%;
-  }
-
   .cat-fieldset--addon .cat-form__legend {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
 }

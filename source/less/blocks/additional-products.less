@@ -1,23 +1,5 @@
 /*         Мобильная разметка         */
 
-.additional-products {
-  position: relative;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    right: -20px;
-    top: 43px;
-
-    width: 70%;
-    height: 3px;
-    background-color: @button-color;
-
-    z-index: -1;
-  }
-}
-
 .additional-products__heading {
   position: relative;
 
@@ -89,29 +71,12 @@
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-  .additional-products {
-    &::after {
-      content: "";
-
-      position: absolute;
-      right: -30px;
-      left: -30px;
-      top: 22px;
-
-      width: auto;
-      height: 3px;
-      background-color: @button-color;
-
-      z-index: -1;
-    }
-  }
-
   .additional-products__heading {
-    width: 415px;
+    width: 400px;
     margin-top: 70px;
     margin-bottom: 80px;
     margin-left: 10px;
-    padding: 0 30px;
+    padding: 0 26px;
 
     font-size: @extra-large-font-size;
     line-height: @extra-huge-line-height;
@@ -126,18 +91,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 38px 30px 40px;
+    padding: 13px 38px 27px 38px;
 
     border: 1px solid @border-color;
-  }
 
-  .additional-products__item:not(:last-child) {
-    border-bottom: none;
+    &:not(:last-child) {
+      border-bottom: none;
+    }
   }
 
   .additional-item__heading {
     margin-top: 13px;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
     padding: 0;
 
     width: 170px;
@@ -180,14 +145,7 @@
   .additional-products {
     display: flex;
     justify-content: space-between;
-
     flex-wrap: wrap;
-
-    &::after {
-      top: 98px;
-      right: -200%;
-      left: -200%;
-    }
   }
 
   .additional-products__item {
@@ -197,15 +155,15 @@
 
     border: none;
     border-top: 1px solid @border-color;
-  }
 
-  .additional-products__item:last-child {
-    border-bottom: 1px solid @border-color;
+    &:last-child {
+      border-bottom: 1px solid @border-color;
+    }
   }
 
   .additional-products__heading {
     margin-top: 78px;
-    margin-bottom: 80px;
+    margin-bottom: 77px;
     margin-left: -40px;
     padding: 0 40px;
     padding-right: 0;

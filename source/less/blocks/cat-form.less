@@ -28,15 +28,32 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 19px;
+  }
+
+  &--email,
+  &--tel {
+    position: relative;
+  }
 }
 
 .cat-form__label {
-  margin-right: 10px;
+  margin-right: 15px;
 
   line-height: @large-line-height;
   text-transform: uppercase;
   text-align: left;
+
+  &--email {
+    margin-right: 11px;
+  }
+
+  &--tel {
+    margin-right: 9px;
+  }
 }
 
 .cat-form__program {
@@ -61,7 +78,7 @@
   content: "";
 
   position: absolute;
-  left: 11px;
+  left: 9px;
   top: 50%;
 
   width: 12px;
@@ -110,17 +127,10 @@
   &:focus::-webkit-input-placeholder {
     color: transparent;
   }
-}
 
-.cat-form__input--error {
-  &:invalid {
+  &--error {
     border: 2px solid #ff8282;
   }
-}
-
-.cat-form__item--email,
-.cat-form__item--tel {
-  position: relative;
 }
 
 .cat-form__logo-email {
@@ -165,7 +175,7 @@
   position: relative;
 
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   padding: 0;
   padding-right: 25px;
 
@@ -175,11 +185,11 @@
   color: @heading-color;
 
   background-color: #ffffff;
-}
 
-.cat-form__legend--long {
-  width: 200px;
-  padding: 0;
+  &--long {
+    width: 200px;
+    padding: 0;
+  }
 }
 
 .cat-form__textarea {
@@ -204,10 +214,10 @@
     padding: 14px;
     border: 2px solid @text-color;
   }
-}
 
-.cat-form__textarea:focus::placeholder {
-  opacity: 0;
+  &:focus::placeholder {
+    opacity: 0;
+  }
 }
 
 .cat-form__item:last-child > .checkbox-label {
@@ -237,7 +247,8 @@
 }
 
 .cat-form__button {
-  margin-bottom: 18px;
+  margin-top: -3px;
+  margin-bottom: 20px;
 
   outline: none;
   border: none;
@@ -278,6 +289,7 @@
   }
 
   .cat-form__radio:checked + .radio-label::after {
+    left: 11px;
     width: 18px;
     height: 18px;
   }
@@ -287,10 +299,18 @@
   }
 
   .cat-form__label {
-    margin-right: 20px;
+    margin-right: 18px;
 
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
+
+    &--email {
+      margin-right: 20px;
+    }
+
+    &--tel {
+      margin-right: 13px;
+    }
   }
 
   .cat-form__textarea {
@@ -310,7 +330,7 @@
     width: auto;
     padding: 0 40px;
     margin-left: -40px;
-    margin-bottom: 70px;
+    margin-bottom: 76px;
     background-color: white;
 
     font-size: @extra-large-font-size;
@@ -337,6 +357,7 @@
     display: flex;
     align-items: center;
     margin: 0;
+    margin-bottom: 72px;
     padding: 0;
   }
 
@@ -358,23 +379,34 @@
     justify-content: space-between;
   }
 
-  .cat-form__input--email {
-    margin-right: 0;
-  }
+  .cat-form__input {
+    &--email {
+      margin-right: 0;
+    }
 
-  .cat-form__item:last-child {
-    margin: 0;
+    &:last-child {
+      margin: 0;
+    }
   }
 
   .cat-form__list {
     margin: 70px 0;
-  }
 
-  .cat-form__list--flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 70px 0 55px 0;
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 75px 0 47px 0;
+    }
+
+    &--bordered {
+      width: 570px;
+      padding: 0 30px;
+      padding-top: 35px;
+      padding-bottom: 25px;
+      border: 1px solid @border-color;
+    }
   }
 
   .cat-form__comment {
@@ -382,7 +414,8 @@
   }
 
   .cat-form__textarea {
-    margin: 70px 0;
+    margin: 75px 0;
+    margin-bottom: 67px;
   }
 
   .cat-form__item {
@@ -400,14 +433,6 @@
     width: 100%;
   }
 
-  .cat-form__list--bordered {
-    width: 570px;
-    padding: 0 30px;
-    padding-top: 35px;
-    padding-bottom: 25px;
-    border: 1px solid @border-color;
-  }
-
   .cat-form__legend {
     width: auto;
     margin: 0;
@@ -416,12 +441,24 @@
   }
 
   .cat-fieldset--addon .cat-form__item {
-    width: 250px;
+    width: 240px;
+
+    &:not(:nth-child(4n)) {
+      margin-right: 85px;
+    }
+
+    &:nth-child(n+5) {
+      margin-top: 30px;
+    }
   }
 
   .cat-fieldset--addon .cat-form__list {
-    width: 100%;
-    margin: 50px 0 55px 0;
+    justify-content: flex-start;
+    margin: 50px 0 52px 0;
+  }
+
+  .cat-form__button-container {
+    margin-bottom: 80px;
   }
 
   .cat-form__button {
