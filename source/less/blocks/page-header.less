@@ -1,11 +1,11 @@
 /*         Мобильная разметка         */
 
-.site-list__icon-comb {
-  fill: red;
-}
-
 .page-header__container {
-  padding-top: 15px;
+  padding-top: 10px;
+
+  &--catalog {
+    padding-top: 14px;
+  }
 }
 
 .page-header__main-nav {
@@ -17,7 +17,8 @@
   justify-content: center;
   align-items: center;
   max-width: 203px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  margin-left: -6px;
 
   &:hover,
   &:focus {
@@ -58,11 +59,11 @@
   }
 }
 
-.main-nav--closed .page-header__toggle {
+.page-header__main-nav--closed .page-header__toggle {
   background-image: url("../img/icon-mobile-menu.svg");
 }
 
-.main-nav--opened .page-header__toggle {
+.page-header__main-nav--opened .page-header__toggle {
   background-image: url("../img/icon-close.svg");
 }
 
@@ -102,6 +103,10 @@
   white-space: nowrap;
   color: @heading-color;
 
+  &--active {
+    border-bottom: 1px solid @button-color;
+  }
+
   &:hover,
   &:focus {
     color: @cat-link-hover-color;
@@ -112,20 +117,18 @@
   }
 }
 
-.page-header__link--active {
-  border-bottom: 1px solid @button-color;
-}
+/*         Доп.условия для отображению мобильного меню         */
 
 @media (max-width: 767px) {
-  .main-nav--closed .page-header__list {
+  .page-header__main-nav--closed .page-header__list {
     display: none;
   }
 
-  .main-nav--nojs .page-header__list {
+  .page-header__main-nav--nojs .page-header__list {
     display: block;
   }
 
-  .main-nav--nojs .page-header__toggle {
+  .page-header__main-nav--nojs .page-header__toggle {
     background-image: none;
   }
 }
@@ -141,6 +144,18 @@
     align-items: center;
     flex-wrap: wrap;
     padding-top: 25px;
+    padding-bottom: 18px;
+  }
+
+  .page-header__link {
+    font-size: @middling-font-size;
+    line-height: @huge-line-height;
+    color: @heading-color;
+
+    &--active {
+      padding: 9px 0;
+      border-bottom: 2px solid @button-color;
+    }
   }
 
   .page-header__main-nav {
@@ -162,14 +177,20 @@
 
   .page-header__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
+    max-width: 550px;
 
     border: none;
   }
 
   .page-header__item {
+    padding: 0;
     margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &::after {
       display: none;
@@ -179,23 +200,13 @@
       display: none;
     }
   }
-
-  .page-header__item:last-child {
-    margin-right: 0;
-  }
-
-  .page-header__link {
-    font-size: @medium-font-size;
-    line-height: @huge-line-height;
-    color: @heading-color;
-  }
 }
 
 /*         Разметка под desktop        */
 
 @media (min-width: @desktop-width) {
   .page-header__container {
-    padding-top: 35px;
+    padding-top: 55px;
   }
 
   .page-header__picture img {
@@ -203,43 +214,56 @@
     height: 60px;
   }
 
-  .page-header__link--colored {
-    margin: 0;
-    padding: 5px 0;
-
+  .page-header__link {
     font-size: @medium-font-size;
-    line-height: @extra-large-line-height;
+    line-height: @huge-line-height;
     text-transform: uppercase;
-    color: #ffffff;
 
-    &:hover,
-    &:focus {
+    &--colored {
+      margin: 0;
+      padding: 10px 0;
+
+      font-size: @medium-font-size;
+      line-height: @huge-line-height;
+      text-transform: uppercase;
       color: #ffffff;
-      opacity: 0.6;
+
+      &:hover,
+      &:focus {
+        color: #ffffff;
+        opacity: 0.6;
+      }
+
+      &:active {
+        color: #ffffff;
+        opacity: 0.3;
+      }
     }
 
-    &:active {
-      color: #ffffff;
-      opacity: 0.3;
+    &--active-colored {
+      border-bottom: 2px solid #ffffff;
     }
-  }
-
-  .page-header__link--active-colored {
-    border-bottom: 1px solid #ffffff;
   }
 
   .page-header--background {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
 
-    display: block;
-    height: 696px;
-    width: 50%;
+    &::after {
+      content: "";
 
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-position: 100% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+
+      display: block;
+      height: 696px;
+      width: 50%;
+
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-position: 100% 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }

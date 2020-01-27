@@ -9,7 +9,7 @@
     position: absolute;
     left: -20px;
     right: -20px;
-    bottom: 0;
+    bottom: -6px;
 
     height: 1px;
 
@@ -28,14 +28,32 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 19px;
+  }
+
+  &--email,
+  &--tel {
+    position: relative;
+  }
 }
 
 .cat-form__label {
   margin-right: 15px;
 
   line-height: @large-line-height;
+  text-transform: uppercase;
   text-align: left;
+
+  &--email {
+    margin-right: 11px;
+  }
+
+  &--tel {
+    margin-right: 9px;
+  }
 }
 
 .cat-form__program {
@@ -60,11 +78,11 @@
   content: "";
 
   position: absolute;
-  left: 11px;
+  left: 9px;
   top: 50%;
 
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
 
   transform: translateY(-50%);
@@ -85,7 +103,7 @@
   padding-left: 15px;
 
   line-height: @large-line-height;
-  vertical-align: middle;
+  text-transform: uppercase;
 
   border: 1px solid @input-border-major-color;
   background-color: #ffffff;
@@ -101,23 +119,24 @@
     padding-left: 14px;
     border: 2px solid @text-color;
   }
-}
 
-.cat-form__input--error {
-  &:invalid {
+  &::-webkit-input-placeholder {
+    color: #999999;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &--error {
     border: 2px solid #ff8282;
   }
-}
-
-.cat-form__item--email,
-.cat-form__item--tel {
-  position: relative;
 }
 
 .cat-form__logo-email {
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 15px;
 
   width: 18px;
   height: 14px;
@@ -136,7 +155,7 @@
 .cat-form__logo-tel {
   position: absolute;
   top: 50%;
-  right: 17px;
+  right: 12px;
 
   width: 21px;
   height: 21px;
@@ -156,20 +175,21 @@
   position: relative;
 
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   padding: 0;
   padding-right: 25px;
 
-  font-size: @medium-font-size;
+  font-size: @large-font-size;
   line-height: @huge-line-height;
   text-align: left;
   color: @heading-color;
 
   background-color: #ffffff;
-}
 
-.cat-form__legend--long {
-  width: 180px;
+  &--long {
+    width: 200px;
+    padding: 0;
+  }
 }
 
 .cat-form__textarea {
@@ -180,6 +200,7 @@
   resize: none;
 
   line-height: @large-line-height;
+  text-transform: uppercase;
 
   border: 1px solid @input-border-major-color;
   outline: none;
@@ -193,10 +214,10 @@
     padding: 14px;
     border: 2px solid @text-color;
   }
-}
 
-.cat-form__textarea:focus::placeholder {
-  opacity: 0;
+  &:focus::placeholder {
+    opacity: 0;
+  }
 }
 
 .cat-form__item:last-child > .checkbox-label {
@@ -210,7 +231,7 @@
   background-position: center;
 }
 
-.cat-form__checkbox:disabled + .rcheckbox-label::after {
+.cat-form__checkbox:disabled + .checkbox-label::after {
   opacity: 0.4;
 }
 
@@ -219,14 +240,15 @@
 }
 
 .cat-form__button-container {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   padding: 0;
 
   text-align: center;
 }
 
 .cat-form__button {
-  margin-bottom: 25px;
+  margin-top: -3px;
+  margin-bottom: 20px;
 
   outline: none;
   border: none;
@@ -254,7 +276,8 @@
   }
 
   .cat-form__input {
-    padding: 15px 20px;
+    padding: 0 20px;
+    height: 52px;
 
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
@@ -265,12 +288,33 @@
     }
   }
 
+  .cat-form__radio:checked + .radio-label::after {
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .cat-form__item {
+    margin-bottom: 20px;
+  }
+
   .cat-form__label {
+    margin-right: 18px;
+
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
+
+    &--email {
+      margin-right: 20px;
+    }
+
+    &--tel {
+      margin-right: 13px;
+    }
   }
 
   .cat-form__textarea {
+    height: 175px;
     padding: 15px 20px;
 
     font-size: @medium-font-size;
@@ -286,6 +330,7 @@
     width: auto;
     padding: 0 40px;
     margin-left: -40px;
+    margin-bottom: 76px;
     background-color: white;
 
     font-size: @extra-large-font-size;
@@ -293,9 +338,7 @@
   }
 
   .cat-form__list--bordered {
-    padding: 0 30px;
-    padding-top: 25px;
-    padding-bottom: 15px;
+    padding: 35px 30px 5px 30px;
     border: 1px solid @border-color;
   }
 
@@ -314,6 +357,7 @@
     display: flex;
     align-items: center;
     margin: 0;
+    margin-bottom: 72px;
     padding: 0;
   }
 
@@ -321,6 +365,8 @@
     width: 283px;
     margin: 0;
     margin-right: 60px;
+
+    font-size: @little-font-size;
   }
 }
 
@@ -333,20 +379,45 @@
     justify-content: space-between;
   }
 
-  .cat-form__input--email {
-    margin-right: 80px;
-  }
+  .cat-form__input {
+    &--email {
+      margin-right: 0;
+    }
 
-  .cat-form__logo-email {
-    right: 100px;
-  }
-
-  .cat-form__item:last-child {
-    margin: 0;
+    &:last-child {
+      margin: 0;
+    }
   }
 
   .cat-form__list {
     margin: 70px 0;
+
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 75px 0 47px 0;
+    }
+
+    &--bordered {
+      width: 570px;
+      padding: 0 30px;
+      padding-top: 35px;
+      padding-bottom: 25px;
+      margin-bottom: 10px;
+
+      border: 1px solid @border-color;
+    }
+  }
+
+  .cat-form__item {
+    width: 570px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .cat-form__comment {
@@ -354,12 +425,8 @@
   }
 
   .cat-form__textarea {
-    margin: 70px 0;
-  }
-
-  .cat-form__item {
-    width: 570px;
-    margin-bottom: 20px;
+    margin: 75px 0;
+    margin-bottom: 67px;
   }
 
   .cat-form {
@@ -368,23 +435,8 @@
     justify-content: space-between;
   }
 
-  .cat-form__list--bordered {
-    width: 570px;
-    padding: 0 30px;
-    padding-top: 25px;
-    padding-bottom: 15px;
-    border: 1px solid @border-color;
-  }
-
-  .cat-form__radio:checked + .radio-label::after {
-    width: 18px;
-    height: 18px;
-  }
-
-  .cat-form__list--flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  .cat-form__contacts {
+    width: 100%;
   }
 
   .cat-form__legend {
@@ -395,15 +447,29 @@
   }
 
   .cat-fieldset--addon .cat-form__item {
-    width: 25%;
+    width: 240px;
+
+    &:not(:nth-child(4n)) {
+      margin-right: 85px;
+    }
+
+    &:nth-child(n+5) {
+      margin-top: 30px;
+    }
   }
 
   .cat-fieldset--addon .cat-form__list {
-    margin: 50px 0 30px 0;
+    justify-content: flex-start;
+    margin: 50px 0 52px 0;
+  }
+
+  .cat-form__button-container {
+    margin-bottom: 80px;
   }
 
   .cat-form__button {
     width: 568px;
+    margin-right: 82px;
   }
 
   .cat-form__note {

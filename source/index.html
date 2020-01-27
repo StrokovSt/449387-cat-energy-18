@@ -5,9 +5,9 @@
     <title>HTML Academy: Кэт энерджи - index</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="/css/style.min.css">
-    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" type="font/woff2">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
   </head>
   <body>
 
@@ -15,54 +15,53 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header">
-      <div class="page-header--background"></div>
+    <header class="page-header page-header--background">
       <div class="page-header__container container">
-      <a class="page-header__logo">
-        <picture class="page-header__picture">
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип: Cat Energy">
-        </picture>
-      </a>
-
-      <nav class="page-header__main-nav main-nav--nojs">
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="page-header__list">
-          <li class="page-header__item">
-            <a class="page-header__link page-header__link--colored page-header__link--active  page-header__link--active-colored">Главная</a>
-          </li>
-          <li class="page-header__item">
-            <a class="page-header__link page-header__link--colored" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="page-header__item">
-            <a class="page-header__link page-header__link--colored" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-
-      <section class="cat-program">
-          <h2 class="cat-program__heading">Функциональное<br>питание для котов</h2>
-          <b class="cat-program__slogan">Занялся собой? Займись котом!</b>
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/index-can-desktop@1x.webp 1x, img/WebP/index-can-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/WebP/index-can-tablet@1x.webp 1x, img/WebP/index-can-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/WebP/index-can-mobile@1x.webp 1x, img/WebP/index-can-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
-            <img class="cat-program__product-image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Изображение товара: Cat Energy Pro со вкусом курицы">
+        <a class="page-header__logo">
+          <picture class="page-header__picture">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип: Cat Energy">
           </picture>
-          <a class="cat-program__link button" href="form.html">Подобрать программу</a>
-      </section>
+        </a>
+
+        <nav class="page-header__main-nav page-header__main-nav--nojs">
+          <button class="page-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="page-header__list">
+            <li class="page-header__item">
+              <a class="page-header__link page-header__link--colored page-header__link--active  page-header__link--active-colored">Главная</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link page-header__link--colored" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link page-header__link--colored" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main class="page-main">
       <div class="container">
         <h1 class="visually-hidden">Cat Energy - главная страница</h1>
+
+        <section class="cat-program">
+          <h2 class="cat-program__heading">Функциональное<br>питание для котов</h2>
+          <b class="cat-program__slogan">Занялся собой? Займись котом!</b>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/index-can-desktop@1x.webp 1x, img/webp/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/index-can-tablet@1x.webp 1x, img/webp/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/index-can-mobile@1x.webp 1x, img/webp/index-can-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+            <img class="cat-program__product-image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Изображение товара: Cat Energy Pro со вкусом курицы">
+          </picture>
+          <a class="cat-program__link button" href="form.html">Подобрать программу</a>
+        </section>
 
         <section class="cat-mode">
           <h2 class="visually-hidden">Назначение питания</h2>
@@ -92,7 +91,7 @@
             <li class="work-principle__item work-principle__item--leaf">
               <div class="work-principle__icon-container">
                 <picture>
-                  <source type="image/webp" srcset="img/WebP/advantage-leaf@1x.webp 1x, img/WebP/advantage-leaf@2x.webp 2x">
+                  <source type="image/webp" srcset="img/webp/advantage-leaf@1x.webp 1x, img/webp/advantage-leaf@2x.webp 2x">
 
                   <img class="work-principle__icon-image" src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x" alt="Иконка здорового питания">
                 </picture>
@@ -104,7 +103,7 @@
             <li class="work-principle__item work-principle__item--powder">
               <div class="work-principle__icon-container">
                 <picture>
-                  <source type="image/webp" srcset="img/WebP/advantage-powder@1x.webp 1x, img/WebP/advantage-powder@2x.webp 2x">
+                  <source type="image/webp" srcset="img/webp/advantage-powder@1x.webp 1x, img/webp/advantage-powder@2x.webp 2x">
 
                   <img class="work-principle__icon-image" src="img/advantage-powder@1x.png" srcset="img/advantage-powder@2x.png 2x" alt="Иконка порошка">
                 </picture>
@@ -116,7 +115,7 @@
             <li class="work-principle__item work-principle__item--dining">
               <div class="work-principle__icon-container">
                 <picture>
-                  <source type="image/webp" srcset="img/WebP/advantage-dining@1x.webp 1x, img/WebP/advantage-dining@2x.webp 2x">
+                  <source type="image/webp" srcset="img/webp/advantage-dining@1x.webp 1x, img/webp/advantage-dining@2x.webp 2x">
 
                   <img class="work-principle__icon-image" src="img/advantage-dining@1x.png" srcset="img/advantage-dining@2x.png 2x" alt="Иконка еды">
                 </picture>
@@ -128,13 +127,13 @@
             <li class="work-principle__item work-principle__item--clock">
               <div class="work-principle__icon-container">
                 <picture>
-                  <source type="image/webp" srcset="img/WebP/advantage-clock@1x.webp 1x, img/WebP/advantage-clock@2x.webp 2x">
+                  <source type="image/webp" srcset="img/webp/advantage-clock@1x.webp 1x, img/webp/advantage-clock@2x.webp 2x">
 
                   <img class="work-principle__icon-image" src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x" alt="Иконка времени">
                 </picture>
               </div>
               <p class="work-principle__description">
-                Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего&#160;питомца!
               </p>
             </li>
           </ul>
@@ -169,43 +168,39 @@
         <section class="example__cat-switch switch">
           <h2 class="switch__heading visually-hidden">Кошачий трансфомер</h2>
           <div class="switch__cats-container">
-            <div class="switch__img-block switch__img-block--fat-cat">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/before-desktop@1x.webp 1x, img/WebP/before-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/WebP/before-tablet@1x.webp 1x, img/WebP/before-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/WebP/before-mobile@1x.webp 1x, img/WebP/before-mobile@2x.webp 2x">
+            <picture class="switch__img-block switch__img-block--fat-cat">
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/before-desktop@1x.webp 1x, img/webp/before-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp 1x, img/webp/before-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x">
 
-                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img class="switch__fat-cat" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="232" alt="Изображение худого котейки">
-              </picture>
-            </div>
-            <div class="switch__img-block switch__img-block--slim-cat">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/after-desktop@1x.webp 1x, img/WebP/after-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/WebP/after-tablet@1x.webp 1x, img/WebP/after-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/WebP/after-mobile@1x.webp 1x, img/WebP/after-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+              <img class="switch__fat-cat" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="232" alt="Изображение худого котейки">
+            </picture>
+            <picture class="switch__img-block switch__img-block--slim-cat">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/after-desktop@1x.webp 1x, img/webp/after-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp 1x, img/webp/after-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/after-mobile@1x.webp 1x, img/webp/after-mobile@2x.webp 2x">
 
-                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                <img class="switch__slim-cat" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="232" alt="Изображение толстого котейки">
-              </picture>
-            </div>
+              <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+              <img class="switch__slim-cat" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="232" alt="Изображение толстого котейки">
+            </picture>
           </div>
           <div class="switch__range">
-            <span class="switch__span">Было</span>
+            <span class="switch__span switch__span--before">Было</span>
             <div class="switch_scale">
               <div class="switch__bar"></div>
             </div>
-            <span class="switch__span">Стало</span>
+            <span class="switch__span switch__span--after">Стало</span>
           </div>
         </section>
       </section>
 
-      <section class="map map--main">
+      <section class="map">
         <div class="map__text-container">
           <h2 class="visually-hidden">Наши координаты</h2>
-          <span class="map__invite">приглашаем к сотрудничеству дилеров!</span>
+          <b class="map__invite">приглашаем <br>к сотрудничеству дилеров!</b>
           <div class="map__adress-container">
             <p class="map__adress">ул. Большая Конюшенная, д. 19/8</p>
             <p class="map__adress">Санкт-Петербург</p>
@@ -213,64 +208,68 @@
         </div>
         <a class="map__link">
           <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/WebP/bg-map-desktop@1x.webp 1x, img/WebP/bg-map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/WebP/bg-map-tablet@1x.webp 1x, img/WebP/bg-map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/WebP/bg-map-mobile@1x.webp 1x, img/WebP/bg-map-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/bg-map-desktop@1x.webp 1x, img/webp/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/bg-map-tablet@1x.webp 1x, img/webp/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/bg-map-mobile@1x.webp 1x, img/webp/bg-map-mobile@2x.webp 2x">
 
             <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
             <img class="map__map-image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
           </picture>
         </a>
+        <div class="map__iframe-container" id="map"></div>
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__container container">
-      <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип: Cat Energy">
-      </a>
-
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Мы в Вконтакте</span>
-            <svg class="page-footer__logo-svg page-footer__logo--vk" width="30" height="16">
-              <use xlink:href="img/sprite.svg#icon-vk"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-            <span class="visually-hidden">Мы в Инстаграме</span>
-            <svg class="page-footer__logo-svg page-footer__logo--insta" width="23" height="23">
-              <use xlink:href="img/sprite.svg#icon-insta"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-            <span class="visually-hidden">Мы в Фейсбуке</span>
-            <svg class="page-footer__logo-svg page-footer__logo--fb" width="14" height="28">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-
-      <div class="page-footer__copyright copyright">
-        <p class="copyright__text">HTML Academy</p>
-        <a class="page-footer__logo-link" href="https://htmlacademy.ru/">
-          <svg class="page-footer__logo-svg page-footer__logo--htmlacademy" width="41" height="46">
-            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
-          </svg>
+        <a class="page-footer__logo" href="index.html">
+          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип: Cat Energy">
         </a>
-      </div>
+
+        <ul class="page-footer__social">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы в Вконтакте</span>
+              <svg class="page-footer__logo-svg page-footer__logo-svg--vk" width="30" height="16">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link page-footer__social-link--instagram" href="https://www.instagram.com/htmlacademy">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+              <svg class="page-footer__logo-svg page-footer__logo-svg--insta" width="23" height="23">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link page-footer__social-link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg class="page-footer__logo-svg page-footer__logo-svg--fb" width="14" height="28">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="page-footer__copyright">
+          <a class="page-footer__logo-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="page-footer__copyright-text">HTML Academy</span>
+            <svg class="page-footer__logo-svg page-footer__logo-svg--htmlacademy" width="41" height="46">
+              <use xlink:href="#icon-htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
 
     <script src="js/menu.js"></script>
     <script src="js/picturefill.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1a9cddfe-ec69-4a28-b149-f437d3adf4c8&lang=ru_RU">
+    </script>
+    <script src="js/yandex-map.js"></script>
 
   </body>
 </html>

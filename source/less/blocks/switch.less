@@ -9,7 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 75%;
   margin: 0 auto;
 }
 
@@ -18,13 +17,14 @@
 
   width: 320px;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .switch__img-block img {
   display: block;
   width: 320px;
   height: auto;
+  margin-top: 18px;
 }
 
 .switch__slim-cat {
@@ -36,28 +36,31 @@
 
 .switch_scale {
   position: relative;
+  z-index: 1;
 
   display: block;
-  width: 45%;
+  width: 27%;
   height: 14px;
-  margin: 0 18px;
 
   background-color: white;
-  border-radius: 6px;
+  border: 1px solid @border-switch-color;
+  border-radius: 7px;
 
   &::after {
     content: "";
 
     position: absolute;
-    left: 6px;
-    top: 4px;
+    left: 8px;
+    top: 50%;
 
     display: block;
-    width: 40%;
+    width: 41%;
     height: 6px;
 
     background-color: @button-color;
     border-radius: 6px;
+
+    transform: translateY(-50%);
   }
 }
 
@@ -65,6 +68,25 @@
   font-size: @little-font-size;
   line-height: @extra-large-line-height;
   text-transform: uppercase;
+
+  cursor: pointer;
+
+  &--before {
+    margin-right: 19px;
+  }
+
+  &--after {
+    margin-left: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid black;
+  }
+
+  &:active {
+    border: none;
+  }
 }
 
 /*         Разметка под планшет         */
@@ -109,12 +131,16 @@
 
   .switch__img-block img {
     position: relative;
+
     min-width: 678px;
+    width: 50%;
+    margin: 0;
 
     z-index: 1;
   }
 
   .switch__img-block--fat-cat {
+    display: block;
     width: 50%;
 
     overflow-x: hidden;
@@ -137,16 +163,17 @@
     position: absolute;
     bottom: 12%;
     left: 13%;
+
+    width: 75%;
   }
 
   .switch_scale {
-    position: relative;
-    z-index: 1;
-
-    width: 60%;
+    width: 100%;
     height: 6px;
+    margin: 0;
 
     background-color: #dcdcdc;
+    border: none;
     border-radius: 2.5px;
 
     &::after {
@@ -157,37 +184,41 @@
   .switch__span {
     z-index: 1;
 
+    border-bottom: 1px dotted black;
+
     font-size: @medium-font-size;
   }
 
   .switch__bar {
     position: absolute;
-    top: -11px;
-    left: 46%;
+    top: 50%;
+    left: 50%;
     z-index: 1;
 
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
 
     border: 2px solid @border-color;
     border-radius: 50%;
     background-color: #ffffff;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -50%);
     cursor: pointer;
 
     &::before {
       content: "";
 
       position: absolute;
-      left: 9px;
-      top: 9px;
+      left: 50%;
+      top: 50%;
 
       width: 8px;
       height: 8px;
 
       background-color: @button-color;
       border-radius: 50%;
+      transform: translate(-50%, -50%);
     }
 
     &:hover {
@@ -206,12 +237,84 @@
 
 @media (min-width: @desktop-width) {
   .switch {
-    width: 54%;
+    width: 56%;
     padding-right: 0;
+
+    &::after {
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      background-image: linear-gradient(to right, @background-color 50%, @border-color 50%);
+    }
   }
 
   .switch__cats-container {
-    margin: 0;
-    padding: 0 45px;
+    position: absolute;
+    bottom: 9%;
+    left: 0;
+  }
+
+  .switch__img-block img {
+    position: relative;
+    min-width: 678px;
+    margin-top: 30px;
+  }
+
+  .switch__img-block--fat-cat {
+    position: absolute;
+    left: 33px;
+    width: 47%;
+
+    overflow-x: hidden;
+  }
+
+  .switch__img-block--slim-cat {
+    position: absolute;
+    top: 0;
+    left: 51%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    width: 42%;
+
+    overflow-x: hidden;
+    z-index: 2;
+  }
+
+  .switch__range {
+    bottom: 11%;
+  }
+
+  .switch_scale {
+    width: 468px;
+    height: 6px;
+
+    background-color: #dcdcdc;
+    border-radius: 2.5px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .switch__bar {
+    top: -13px;
+    left: 50%;
+    z-index: 1;
+
+    display: block;
+    width: 34px;
+    height: 34px;
+
+    transform: translateX(-50%);
+  }
+
+  .switch__span--before {
+    padding: 6px 0;
+  }
+
+  .switch__span--after {
+    padding: 6px 0;
   }
 }

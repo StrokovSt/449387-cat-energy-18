@@ -9,67 +9,55 @@
 
   border: none;
 
-  &::after {
-    content: "";
+  &--cat-name {
+    margin-bottom: 11px;
+  }
 
-    position: absolute;
-    top: 13px;
-    right: -20px;
-    left: 20px;
-    height: 3px;
+  &--cat-comment {
+    margin-bottom: 29px;
+  }
 
-    width: 0;
-
-    background-color: @button-color;
-    z-index: -1;
+  &--addon {
+    margin-bottom: 25px;
   }
 }
 
-.cat-fieldset--cat-name {
-  &::after {
-    width: 100%;
-  }
-}
-
-.cat-fieldset--cat-comment {
-  &::after {
-    width: 100%;
-  }
-}
-
-.cat-fieldset--addon {
-  &::after {
-    width: 100%;
-  }
+.cat-fieldset--addon .cat-form__legend {
+  margin-bottom: 40px;
 }
 
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
   .cat-fieldset {
-    &::after {
-      top: 22px;
-      right: -70px;
-      left: -70px;
+    margin-bottom: 52px;
+
+    &--cat-comment {
+      margin-bottom: 63px;
+    }
+
+    &--addon {
+      margin-bottom: 17px;
+    }
+
+    &--program {
+      margin-bottom: 75px;
+    }
+
+    &--cat-name {
+      margin-bottom: 47px;
     }
   }
 
-  .cat-fieldset--cat-name {
-    &::after {
-      width: auto;
-    }
+  .cat-fieldset--addon .cat-form__legend {
+    margin-bottom: 65px;
   }
 
-  .cat-fieldset--cat-comment {
-    &::after {
-      width: auto;
-    }
-  }
+  .cat-form__button {
+    height: 52px;
 
-  .cat-fieldset--addon {
-    &::after {
-      width: auto;
-    }
+    font-size: @medium-font-size;
+    line-height: @extra-large-line-height;
   }
 }
 
@@ -79,10 +67,12 @@
   .cat-fieldset {
     margin: 0;
 
-    &::after {
-      top: 22px;
-      right: -100%;
-      left: -100%;
+    &--addon {
+      width: 100%;
     }
+  }
+
+  .cat-fieldset--addon .cat-form__legend {
+    margin-bottom: 14px;
   }
 }

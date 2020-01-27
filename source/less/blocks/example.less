@@ -4,15 +4,11 @@
   background-color: @background-color;
 }
 
-.icon-pocket {
-  fill: red;
-}
-
 .example__heading {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
-  padding-top: 30px;
+  margin-bottom: 23px;
+  padding-top: 19px;
 
   font-size: @extra-large-font-size;
   line-height: @XXL-line-height;
@@ -22,6 +18,7 @@
 }
 
 .example__description {
+  width: 99%;
   padding: 0;
   margin: 0;
   margin-bottom: 25px;
@@ -50,12 +47,13 @@
   display: inline-block;
   width: 125px;
   margin: 0;
-  padding: 18px 0;
+  padding: 15px 0;
   border: 1px solid @input-border-color;
 
   font-size: @large-font-size;
   line-height: @huge-line-height;
   text-align: center;
+  text-transform: uppercase;
   color: @heading-color;
 }
 
@@ -84,7 +82,7 @@
   width: 190px;
   height: 50px;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .example__expenses {
@@ -107,7 +105,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 90px;
+    padding-bottom: 97px;
 
     background-color: #ffffff;
   }
@@ -115,15 +113,15 @@
   .example__heading {
     width: 100%;
     margin-bottom: 65px;
-    padding-top: 50px;
+    padding-top: 40px;
 
     font-size: @huge-font-size;
     line-height: @XXL-line-height;
   }
 
   .example__description {
-    width: 675px;
-    margin-bottom: 55px;
+    width: 685px;
+    margin-bottom: 50px;
 
     font-size: @little-font-size;
     line-height: @huge-line-height;
@@ -140,11 +138,11 @@
   }
 
   .example__value {
-    width: 165px;
-    padding: 23px 0;
+    width: 162px;
+    padding: 18px 0;
 
-    font-size: 30px;
-    line-height: 1.23;
+    font-size: @big-font-size;
+    line-height: @extra-huge-line-height;
   }
 
   .example__field {
@@ -161,7 +159,7 @@
   }
 
   .example__field--time {
-    width: 90%;
+    width: 91%;
   }
 
   .example__expenses-container {
@@ -171,6 +169,7 @@
     height: 50px;
     margin-top: 0;
     margin-left: auto;
+    margin-right: 0;
   }
 
   .example__expenses {
@@ -192,6 +191,7 @@
     justify-content: space-between;
     width: 1440px;
     margin: 0 auto;
+    margin-top: 0;
 
     border: none;
 
@@ -200,8 +200,8 @@
 
       position: absolute;
       bottom: 0;
-      left: -200%;
-      right: -200%;
+      left: -100%;
+      right: -100%;
 
       display: block;
       height: 462px;
@@ -218,9 +218,25 @@
     width: 46%;
     margin: 0;
     padding: 0 110px;
+    padding-right: 0;
     padding-bottom: 75px;
 
-    background-image: linear-gradient(to bottom, #ffffff 25.5%, @background-color 25.5%);
+    z-index: 1;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      display: block;
+      height: 462px;
+      background-color: @background-color;
+
+      z-index: -1;
+    }
   }
 
   .example__heading {
@@ -228,13 +244,14 @@
     z-index: 1;
 
     width: 100%;
-    margin: 0;
+    margin-top: 46px;
     padding: 0;
   }
 
   .example__description {
     width: 435px;
-    margin-top: 175px;
+    margin-top: 145px;
+    margin-bottom: 70px;
   }
 
   .example__field {
@@ -242,11 +259,10 @@
   }
 
   .example__expenses-container {
-    width: 340px;
+    width: 328px;
     flex-direction: row;
-    justify-content: space-between;
     height: auto;
     margin: 0;
-    margin-top: 55px;
+    margin-top: 59px;
   }
 }
