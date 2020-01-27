@@ -1,34 +1,44 @@
 /*         Мобильная разметка         */
 
 .map {
+  position: relative;
+
   padding: 0;
 }
 
 .map__text-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: flex-start;
   align-content: center;
   padding: 28px 20px;
-}
 
-.map__text-container--colored {
-  background-color: @background-color;
+  &--colored {
+    background-color: @background-color;
+  }
 }
 
 .map__map-image {
   display: block;
-  height: 400px;
+  height: 360px;
   width: 100%;
 }
 
 .map__invite {
   width: 125px;
+  margin-right: 15px;
+  padding: 0;
 
   font-size: @little-font-size;
   line-height: @extra-large-line-height;
   text-align: left;
+  font-weight: normal;
   color: @heading-color;
   text-transform: uppercase;
+}
+
+.map__adress-container {
+  margin-left: auto;
 }
 
 .map__adress {
@@ -42,20 +52,25 @@
   text-align: left;
 }
 
+.map__iframe-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+  height: 360px;
+}
+
 /*         Разметка под планшет         */
 
 @media (min-width: @tablet-width) {
-  .map {
-    margin-top: 70px;
+  .map__map-image {
+    height: 400px;
   }
 
   .map__text-container {
     padding: 65px 70px;
-  }
-
-  .map__map-image {
-    display: block;
-    height: 400px;
   }
 
   .map__invite {
@@ -79,6 +94,10 @@
     line-height: @extra-large-line-height;
     text-align: right;
   }
+
+  .map__iframe-container {
+    height: 400px;
+  }
 }
 
 /*         Разметка под компуктер         */
@@ -92,13 +111,23 @@
     position: absolute;
     top: 95px;
     left: 110px;
+    z-index: 2;
 
     width: 570px;
+    padding: 65px 76px;
 
     background-color: #ffffff;
+
+    &--colored {
+      background-color: #ffffff;
+    }
   }
 
-  .map__text-container--colored {
-    background-color: #ffffff;
+  .map__adress-container {
+    margin-left: 79px;
+  }
+
+  .map__adress {
+    text-align: left;
   }
 }

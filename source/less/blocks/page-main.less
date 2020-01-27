@@ -1,13 +1,33 @@
 /*         Мобильная разметка         */
+.page-main {
+  overflow-x: hidden;
+}
 
 .page-main__heading {
+  position: relative;
+
   width: 100%;
-  margin: 34px auto;
+  margin: 15px auto;
+  margin-bottom: 25px;
 
   font-size: @extra-large-font-size;
   line-height: @XXL-line-height;
   font-weight: normal;
   color: @heading-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    top: -15px;
+    height: 1px;
+    background-color: @border-color;
+  }
+
+  &--catalog {
+    margin-bottom: 29px;
+  }
 }
 
 .page-main__description {
@@ -16,8 +36,9 @@
   margin-bottom: 40px;
   padding: 0;
 
-  font-size: @little-font-size;
+  font-size: @small-font-size;
   line-height: @large-line-height;
+  text-transform: uppercase;
   color: @heading-color;
 }
 
@@ -25,8 +46,19 @@
 
 @media (min-width: @tablet-width) {
   .page-main__heading {
+    margin-top: 40px;
+    margin-bottom: 53px;
+
     font-size: @huge-font-size;
     line-height: @XXL-line-height;
+
+    &::after {
+      display: none;
+    }
+
+    &--catalog {
+      margin-bottom: 25px;
+    }
   }
 
   .page-main__form-container {
@@ -35,15 +67,30 @@
 
   .page-main__description {
     width: 325px;
+    margin-bottom: 67px;
 
-    font-size: @little-font-size;
-    line-height: @huge-line-height;
+    font-size: @medium-font-size;
+    line-height: @big-line-geight;
   }
 }
 
 /*         Разметка под desktop        */
 
 @media (min-width: @desktop-width) {
+  .page-main__heading {
+    margin-top: 57px;
+    margin-bottom: 60px;
+
+    &--catalog {
+      margin-top: 55px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .page-main__container {
+    margin-bottom: 86px;
+  }
+
   .page-main__form-container {
     padding: 0;
   }

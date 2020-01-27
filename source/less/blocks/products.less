@@ -1,9 +1,5 @@
 /*         Мобильная разметка         */
 
-.products {
-  border-bottom: 1px solid @border-color;
-}
-
 .products__list {
   margin: 0;
   padding: 0;
@@ -16,9 +12,11 @@
 
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
   margin-bottom: 25px;
+
+  &--additional {
+    justify-content: center;
+  }
 
   &::after {
     content: "";
@@ -29,48 +27,52 @@
     height: 1px;
     background-color: @border-color;
   }
-}
 
-.products__item:first-child {
-  &::before {
-    content: "";
-    position: absolute;
-    left: -20px;
-    right: -20px;
-    top: 0;
-    height: 1px;
-    background-color: @border-color;
+  &:first-child {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      right: -20px;
+      top: 0;
+      height: 1px;
+      background-color: @border-color;
+    }
   }
 }
 
 .products__product-image {
   display: block;
+  width: 144px;
+  height: 144px;
 }
 
 .products__info-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 50%;
+  width: 48%;
+  margin-left: -4px;
 }
 
 .products__heading {
   width: 65%;
   margin: 0;
-  margin-top: 25px;
-  margin-bottom: 15px;
+  margin-top: 23px;
+  margin-bottom: 12px;
   padding: 0;
 
   font-size: @medium-line-height;
   line-height: @extra-large-line-height;
   text-align: left;
+  font-weight: normal;
   text-transform: uppercase;
   color: @heading-color;
 }
 
 .products__table {
   width: 165px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   border-collapse: collapse;
 }
 
@@ -89,21 +91,17 @@
   text-align: right;
 }
 
-.products__additional {
-  width: 100%;
-
-  text-align: center;
-}
-
 .products__implication {
   position: relative;
 
   display: inline-block;
   padding-top: 80px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
-  font-size: @medium-font-size;
-  line-height: @extra-huge-line-height;
+  font-size: @little-font-size;
+  line-height: @extra-large-line-height;
+  text-align: center;
+  text-transform: uppercase;
   color: @heading-color;
   font-weight: normal;
 
@@ -111,8 +109,8 @@
     content: "";
 
     position: absolute;
-    top: 27px;
-    left: 100px;
+    top: 26px;
+    left: 87px;
 
     display: block;
     width: 31px;
@@ -120,16 +118,24 @@
 
     background-image: url("../img/icon-plus.svg");
     background-repeat: no-repeat;
+
+    opacity: 0.4;
   }
 }
 
 .products__description {
+  width: 100%;
   margin: 0;
   margin-bottom: 20px;
 
   font-family: "Arial", sans-serif;
   font-size: @extra-small-font-size;
   line-height: @medium-line-height;
+  text-align: center;
+}
+
+.products__link {
+  padding: 12px 0;
 }
 
 /*         Разметка под планшет         */
@@ -142,31 +148,58 @@
   .products__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .products__item {
-    position: relative;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
     justify-content: center;
     width: 325px;
-    padding: 38px;
+    padding: 0;
+    margin: 0;
     margin-top: 140px;
-    margin-right: auto;
-    margin-left: auto;
+
+    padding-bottom: 40px;
+
+    text-align: center;
 
     background-color: @background-color;
 
     &::after {
       display: none;
     }
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &--additional {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      border: 1px solid @border-color;
+      background-color: #ffffff;
+    }
   }
 
   .products__product-image {
-    margin-bottom: 40px;
+    position: absolute;
+    left: 50%;
+    top: -46px;
+
+    display: block;
+    width: auto;
+    height: 172px;
+    transform: translateX(-50%);
+
+    &--big {
+      top: -83px;
+
+      height: 208px;
+    }
   }
 
   .products__info-container {
@@ -175,7 +208,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 0;
+    margin: 0 38px;
     padding: 0;
 
     text-align: center;
@@ -183,7 +216,9 @@
 
   .products__heading {
     width: 135px;
-    margin-bottom: 25px;
+    margin-top: 0;
+    margin-bottom: 22px;
+    padding-top: 162px;
 
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
@@ -192,48 +227,34 @@
 
   .products__table {
     width: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 39px;
   }
 
   .products__field {
     font-size: @little-font-size;
     line-height: @medium-line-height;
     border-bottom: 1px solid @border-darker-color;
-    padding: 5px 0;
+    padding: 0;
   }
 
   .products__value {
     font-size: @little-font-size;
     line-height: @medium-line-height;
     border-bottom: 1px solid @border-darker-color;
-    padding: 5px 0;
-  }
-
-  .products__additional {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-
-    text-align: center;
-  }
-
-  .products__item--additional {
-    border: 1px solid @border-color;
-    background-color: #ffffff;
+    padding: 6px 0;
   }
 
   .products__implication {
     width: 135px;
-    padding-top: 165px;
-    margin-bottom: 10px;
+    padding-top: 163px;
+    margin-bottom: 0;
 
-    font-size: @little-font-size;
+    font-size: @medium-font-size;
     line-height: @extra-large-line-height;
 
     &::after {
-      left: 40px;
+      top: 53px;
+      left: 37px;
 
       width: 61px;
       height: 61px;
@@ -242,17 +263,45 @@
 
   .products__description {
     width: 170px;
+    margin-bottom: 59px;
 
     font-size: @little-font-size;
     line-height: @medium-line-height;
+  }
+
+  .products__link {
+    width: 249px;
+    padding: 10px 0;
+
+    font-size: @little-font-size;
   }
 }
 
 /*         Разметка под desktop        */
 
 @media (min-width: @desktop-width) {
+  .products__list {
+    justify-content: flex-start;
+  }
+
   .products__item {
     width: 245px;
-    margin-top: 140px;
+    margin-top: 142px;
+    margin-bottom: 0;
+    margin-right: 80px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  .products__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 169px;
+    height: 40px;
+
+    font-size: @little-font-size;
   }
 }

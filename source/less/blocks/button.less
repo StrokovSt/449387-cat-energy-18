@@ -3,19 +3,16 @@
 .button {
   display: block;
   width: 100%;
-  padding: 13px 0;
+  padding: 11px 0;
 
   font-family: "Oswald", sans-serif;
   text-align: center;
   text-decoration: none;
-  font-size: @small-font-size;
-  line-height: @large-line-height;
   text-transform: uppercase;
   color: #ffffff;
 
   border: none;
   background-color: @button-color;
-
   transition: 0.1s;
 
   &:hover,
@@ -26,19 +23,21 @@
   &:active {
     color: @button-link-main-color;
   }
-}
 
-.button--additional {
-  color: @text-color;
-  background-color: #f2f2f2;
+  &--additional {
+    padding: 12px 0;
 
-  &:hover,
-  &:focus {
-    background-color: @button-additional-hover-color;
-  }
+    color: @text-color;
+    background-color: #f2f2f2;
 
-  &:active {
-    color: @button-link-major-color;
+    &:hover,
+    &:focus {
+      background-color: @button-additional-hover-color;
+    }
+
+    &:active {
+      color: @button-link-major-color;
+    }
   }
 }
 
@@ -46,27 +45,10 @@
 
 @media (min-width: @tablet-width) {
   .button {
-    display: block;
-    width: 250px;
-    padding: 17px 0;
+    width: 245px;
+    padding: 10px 0;
 
-    text-align: center;
     font-size: @medium-font-size;
     line-height: @extra-large-line-height;
-
-    transition: 0.1s;
-  }
-
-  .button--additional {
-    color: @text-color;
-    background-color: #f2f2f2;
-  }
-}
-
-/*         Разметка под desktop        */
-
-@media (min-width: @desktop-width) {
-  .button--additional {
-    width: 100%;
   }
 }

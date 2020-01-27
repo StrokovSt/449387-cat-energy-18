@@ -1,0 +1,120 @@
+/*         Разметка под мобильный экран        */
+
+.stripe {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 42px;
+    left: 20px;
+
+    width: 100vw;
+    height: 3px;
+
+    background-color: @button-color;
+    z-index: -1;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 42px;
+    right: -20px;
+
+    display: none;
+    width: 100vw;
+    height: 3px;
+
+    background-color: @button-color;
+    z-index: -1;
+  }
+
+  &--fieldset {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 13px;
+      left: 20px;
+
+      width: 100vw;
+      height: 3px;
+
+      background-color: @button-color;
+      z-index: -1;
+    }
+
+    &::before {
+      content: "";
+
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: -20px;
+
+
+      width: 100vw;
+      height: 3px;
+
+      background-color: @button-color;
+      z-index: -1;
+    }
+  }
+}
+
+/*         Разметка под планшетик        */
+
+@media (min-width: @tablet-width) {
+  .stripe {
+    position: relative;
+
+    &::after {
+      top: 22px;
+    }
+
+    &::before {
+      display: block;
+      top: 22px;
+    }
+
+    &--fieldset {
+      &::after {
+        top: 20px;
+      }
+
+      &::before {
+        display: block;
+        top: 20px;
+      }
+    }
+  }
+}
+
+/*         Разметка под desktop        */
+
+@media (min-width: @desktop-width) {
+  .stripe {
+    position: relative;
+
+    &::after {
+      top: 98px;
+    }
+
+    &::before {
+      top: 98px;
+    }
+
+    &--fieldset {
+      &::after {
+        top: 20px;
+      }
+
+      &::before {
+        top: 20px;
+      }
+    }
+  }
+}
